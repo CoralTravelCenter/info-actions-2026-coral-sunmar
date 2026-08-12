@@ -1,0 +1,6 @@
+node_modules/
+dist/
+@CMS/
+.DS_Store
+*.log
+.vite/

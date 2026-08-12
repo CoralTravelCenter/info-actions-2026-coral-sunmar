@@ -1,0 +1,24 @@
+{
+  "name": "info-actions-2026",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "b2c-landing-vite dev",
+    "build": "b2c-landing-vite build",
+    "check": "b2c-landing-vite check",
+    "block:add": "b2c-landing-vite block:add",
+    "block:rename": "b2c-landing-vite block:rename"
+  },
+  "dependencies": {
+    "@ant-design/icons-vue": "^7.0.1",
+    "@vueuse/core": "^13.7.0",
+    "ant-design-vue": "^4.2.6",
+    "dayjs": "^1.11.13"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.8",
+    "sass": "^1.102.0",
+    "vue": "^3.5.41"
+  }
+}

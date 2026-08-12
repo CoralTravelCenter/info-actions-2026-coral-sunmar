@@ -1,0 +1,177 @@
+/* === Карточка === */
+.promo-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+
+  article {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    height: 100%;
+    background: #FFF;
+  }
+
+  &__visual {
+    width: 100%;
+    height: 220px;
+
+    @media (width >= 1280px) {
+      height: 150px;
+    }
+
+    @media (width >= 1440px) {
+      height: 180px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+    padding: 16px 20px;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: start;
+    justify-content: space-between;
+    margin-top: auto;
+  }
+
+  &__title {
+    margin-bottom: 8px !important;
+  }
+
+  &__description {
+    margin-bottom: 16px !important;
+    font-weight: 400;
+  }
+
+  &__time {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+
+    .icon {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+
+  &__link {
+    width: fit-content;
+    margin-top: 0 !important;
+    white-space: nowrap;
+  }
+}
+
+/* Вариант SUNMAR.
+   Брендирование — от data-brand на корне блока (#info-actions), а не от класса
+   на каждой карточке: раньше это требовало :class на карточке и трюка
+   .cards-container:has(.sunmar). Иконка бренда теперь не прячется через CSS,
+   а рендерится одна — см. Card.vue. */
+:global([data-brand='sunmar']) .promo-card {
+  background: #f5f5f8;
+  border-radius: 16px;
+
+  .promo-card__visual {
+    height: 250px;
+  }
+
+  .promo-card__content {
+    margin-top: -15px;
+    padding: 24px;
+    background: #f5f5f8;
+    border-radius: 20px;
+  }
+
+  .promo-card__title {
+    margin-bottom: 24px !important;
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .promo-card__description {
+    text-align: center;
+  }
+
+  /* Футер — колонкой и центрирован, но по-прежнему у дна карточки */
+  .promo-card__footer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .promo-card__time {
+    justify-content: center;
+    order: 3;
+    margin-bottom: 20px !important;
+  }
+
+  .promo-card__link {
+    order: 4;
+    margin: 0 auto;
+    font-weight: 600;
+    background: var(--gradient_Primary, linear-gradient(245deg, var(--Gradient-color_Gradinet_Primary_Second, #D8242A) 15.84%, var(--Gradient-color_Gradient_Primary_First, #E7317D) 84.16%));
+    border-radius: 40px;
+    padding-inline: 32px;
+  }
+
+  .time-text {
+    color: #2e3465;
+  }
+}
+
+/* Плашка "Реклама" (как было) */
+:deep(.tooltip-trigger.ant-btn) {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  height: auto;
+  padding: 2px 8px;
+  color: rgb(0 0 0 / 85%);
+  font-size: 12px;
+  line-height: 20px;
+  background: #fff;
+  border: none;
+  border-radius: var(--radius-border_Radius_XXXL, 48px);
+  cursor: pointer;
+  opacity: 0.72;
+}
+
+.content, .copy-status {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  font-size: 12px;
+}
+
+.copy {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+
+  &:hover {
+    background: rgb(0 0 0 / 6%);
+    filter: brightness(90%);
+  }
+}

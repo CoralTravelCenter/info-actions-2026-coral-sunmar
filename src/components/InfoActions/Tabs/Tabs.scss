@@ -1,0 +1,86 @@
+.tabs-navigation {
+  width: 100%;
+  margin-bottom: 32px;
+
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: start;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-radius: 48px;
+
+    @media (width >= 1280px) {
+      padding: 12px;
+      background: #FFF;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    /* Сброс дефолтов <button>: раньше элементом был <li>. */
+    color: inherit;
+    font: inherit;
+    line-height: 24px;
+    text-align: center;
+    background: #fff;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all 300ms ease;
+
+    @media (width >= 1280px) {
+      flex-grow: 1;
+    }
+  }
+
+  &__item.js-active {
+    color: #FFF;
+    background: #0093D0;
+  }
+}
+
+/* Брендирование — от data-brand на корне блока (#info-actions). */
+:global([data-brand='sunmar']) .tabs-navigation {
+  .tabs-navigation__list {
+    gap: 4px;
+    justify-content: center;
+    padding: 8px;
+    background: #F5F5F8;
+    border-radius: 24px;
+
+    @media (width >= 1024px) {
+      flex-wrap: nowrap;
+      gap: 8px;
+      justify-content: start;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+    }
+  }
+
+  .tabs-navigation__item {
+    width: calc(50% - 2px);
+    font-weight: 600;
+    background: #F5F5F8;
+
+    @media (width >= 1024px) {
+      flex: 1 0 auto;
+      width: auto;
+      scroll-snap-align: start;
+    }
+  }
+
+  .tabs-navigation__item.js-active {
+    background: #061A3E;
+  }
+}
+
+/* Утилита .no-scrollbar вынесена в общие стили: src/styles/common/_components.scss */
+
