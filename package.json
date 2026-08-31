@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "b2c-landing-vite dev",
     "build": "b2c-landing-vite build",
-    "check": "b2c-landing-vite check",
+    "check": "b2c-landing-vite check && vue-tsc --noEmit",
+    "typecheck": "vue-tsc --noEmit",
     "block:add": "b2c-landing-vite block:add",
     "block:rename": "b2c-landing-vite block:rename"
   },
@@ -19,6 +20,8 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.8",
     "sass": "^1.102.0",
-    "vue": "^3.5.41"
+    "typescript": "~5.9.3",
+    "vue": "^3.5.41",
+    "vue-tsc": "^3.3.9"
   }
 }

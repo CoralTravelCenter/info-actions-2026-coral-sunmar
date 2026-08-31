@@ -67,7 +67,8 @@ grep -c "PROMOTIONS_DEV\|coralbonus.ru/promo" '@CMS/info-actions.html'   # → 0
 ### 2.3 Контракт полей: обязательные и необязательные
 
 Конфиг приходит из внешнего скрипта, поэтому граница «чужие данные → наш рендер»
-описана явно, в одном месте — `data/promoSchema.js`.
+описана явно интерфейсом `PromotionConfig` в `types/promotion.ts`; нормализация
+выполняется в `data/promoSchema.ts`.
 
 **Обязательные поля** (`REQUIRED_FIELDS`) — `name` и `visual`. Без них рисовать нечего:
 запись отбрасывается и попадает в список `invalid`, о котором сообщаем в интерфейсе.
@@ -213,8 +214,8 @@ ResizeObserver), который приезжает вместе с любым к
 src/
   config/brand.js              — BRAND + METRIKA + reachGoal (единый источник правды)
   data/
-    promoSchema.js             — контракт полей (обязательные/необязательные) + нормализация
-    promotions.js              — загрузчик: глобал на проде, фикстура в dev
+    promoSchema.ts             — проверка обязательных полей + нормализация
+    promotions.ts              — типизированный загрузчик: глобал на проде, фикстура в dev
     promotions.dev.js          — DEV-фикстура, в прод-бандл не попадает
   directives/
     ymbonus.directive.js       — цель показа (дедуп по id акции)
@@ -223,6 +224,8 @@ src/
   utils/
     filterFreshOffers.js       — актуальность по датам, МСК
     configWarnings.js          — проверки конфига (нет обязательных полей, пустой entry_point)
+  types/
+    promotion.ts               — PromotionConfig и готовая к рендеру Promotion
   components/InfoActions/
     InfoActions.vue            — загрузка, фильтрация, уведомление о проблемах конфига
     Card/Card.vue + Card.scss  — карточка акции

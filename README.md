@@ -37,8 +37,9 @@ src/
     Card/Card.vue + Card.scss
     Tabs/Tabs.vue + Tabs.scss
   directives/                    — ymbonus (Метрика на показ), entry (на клик), clipboard
-  data/promoSchema.js           — контракт полей (PromoConfig) + normalizePromotions
-  data/promotions.js            — загрузчик акций (loadPromotions)
+  types/promotion.ts            — интерфейсы входного конфига и готовой акции
+  data/promoSchema.ts           — проверка и нормализация PromotionConfig
+  data/promotions.ts            — типизированный загрузчик акций (loadPromotions)
   data/promotions.dev.js        — DEV-фикстура акций, в прод-бандл НЕ попадает
   utils/filterFreshOffers.js    — фильтр актуальности по датам, МСК (dayjs)
   utils/configWarnings.js       — проверки конфига для предупреждений в интерфейсе
@@ -69,7 +70,8 @@ grep -c "PROMOTIONS_DEV\|coralbonus.ru/promo" '@CMS/info-actions.html'   # → 0
 
 ### Поля записи: обязательные и необязательные
 
-Контракт описан в `data/promoSchema.js` — там же живёт нормализация.
+Контракт описан интерфейсом `PromotionConfig` в `types/promotion.ts`, нормализация —
+в `data/promoSchema.ts`.
 
 **Обязательные:** `name` и `visual`. Без них карточку нечем нарисовать, поэтому запись
 отбрасывается, а в интерфейсе появляется предупреждение с её номером.

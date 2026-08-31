@@ -8,8 +8,8 @@ import WarningOutlined from "@ant-design/icons-vue/WarningOutlined";
 
 import {filterFreshOffers} from "../../utils/filterFreshOffers.js";
 import {collectConfigWarnings, isWarningsVisible} from "../../utils/configWarnings.js";
-import {loadPromotions} from "../../data/promotions.js";
-import {normalizePromotions} from "../../data/promoSchema.js";
+import {loadPromotions} from "../../data/promotions";
+import {normalizePromotions} from "../../data/promoSchema";
 import Tabs from "./Tabs/Tabs.vue";
 import Card from "./Card/Card.vue";
 
@@ -19,7 +19,7 @@ const ALL_FILTER = "Все акции";
 const currentFilter = ref(ALL_FILTER);
 
 // Данные приходят асинхронно: на проде — из внешнего скрипта сайта,
-// в dev — из локальной фикстуры (см. data/promotions.js).
+// в dev — из локальной фикстуры (см. data/promotions.ts).
 const promotionsArr = shallowRef([]);
 const isLoading = ref(true);
 
@@ -55,7 +55,8 @@ onMounted(async () => {
 	try {
 		const raw = await loadPromotions();
 
-		// Контракт полей и производные значения — в data/promoSchema.js.
+		// Контракт полей и производные значения — в types/promotion.ts
+		// и data/promoSchema.ts.
 		// Записи без обязательных полей отбрасываются и попадают в invalid.
 		const {promotions, invalid} = normalizePromotions(raw);
 		promotionsArr.value = promotions;
