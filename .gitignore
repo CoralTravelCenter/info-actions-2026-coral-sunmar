@@ -4,3 +4,31 @@ dist/
 .DS_Store
 *.log
 .vite/
+# Dependencies
+# Generated builder output and local deploy state
+.b2c/
+dist-ssr/
+build/
+# Local environment files
+.env
+.env.*
+!.env.example
+# Logs, caches, and temporary files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.cache/
+coverage/
+*.tmp
+*.temp
+# Operating system and editor files
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.sw?
+*.suo
+*.ntvs*
+*.njsproj
+*.sln

@@ -7,22 +7,30 @@
  * События на элементе: `clipboard:success` / `clipboard:error`,
  * в `detail` — `{ ok, text, error }`.
  *
- * Что почистили: мёртвый хук `updated`, писавший `dataset.clipboardText`,
- * который нигде не читался; хук выравнен с остальными директивами (`unmounted`),
- * служебное поле переведено на `Symbol`.
+ * Актуальное значение и функция очистки хранятся в WeakMap, не расширяя DOM-элемент.
  */
 
-/** Служебное поле: единое соглашение об именовании для всех директив. */
-const CLEANUP = Symbol("clipboardCleanup");
+import type {Directive} from "vue";
+
+interface ClipboardOptions {
+  text?: string;
+  onSuccess?: (text: string) => void;
+  onError?: (error: unknown) => void;
+}
+
+type ClipboardBindingValue = string | ClipboardOptions;
+
+const cleanupByElement = new WeakMap<HTMLElement, () => void>();
+const valueByElement = new WeakMap<HTMLElement, ClipboardBindingValue>();
 
 /**
  * @param {unknown} value Значение директивы.
  * @param {HTMLElement} el
  * @returns {string}
  */
-function resolveText(value, el) {
+function resolveText(value: ClipboardBindingValue, el: HTMLElement): string {
   if (typeof value === "string") return value;
-  if (value && typeof value === "object" && "text" in value) return value.text || "";
+  if (value && typeof value === "object") return value.text ?? "";
   return el.innerText || "";
 }
 
@@ -30,7 +38,7 @@ function resolveText(value, el) {
  * @param {string} text
  * @returns {Promise<boolean>} Удалось ли скопировать современным API.
  */
-async function copyModern(text) {
+async function copyModern(text: string): Promise<boolean> {
   if (!navigator.clipboard?.writeText) return false;
   await navigator.clipboard.writeText(text);
   return true;
@@ -41,7 +49,7 @@ async function copyModern(text) {
  * @param {string} text
  * @returns {boolean}
  */
-function copyLegacy(text) {
+function copyLegacy(text: string): boolean {
   const textarea = document.createElement("textarea");
   textarea.value = text;
   textarea.setAttribute("readonly", "true");
@@ -64,12 +72,15 @@ function copyLegacy(text) {
   return ok;
 }
 
-export default {
+const clipboard: Directive<HTMLElement, ClipboardBindingValue> = {
   mounted(el, binding) {
+    valueByElement.set(el, binding.value);
+
     const handler = async () => {
-      const text = resolveText(binding.value, el);
+      const value = valueByElement.get(el) ?? binding.value;
+      const text = resolveText(value, el);
       let ok = false;
-      let error = null;
+      let error: unknown = null;
 
       try {
         ok = (await copyModern(text)) || copyLegacy(text);
@@ -85,19 +96,25 @@ export default {
         })
       );
 
-      const value = binding.value;
-      if (value && typeof value === "object") {
+      if (typeof value === "object") {
         if (ok) value.onSuccess?.(text);
         else value.onError?.(error);
       }
     };
 
     el.addEventListener("click", handler);
-    el[CLEANUP] = () => el.removeEventListener("click", handler);
+    cleanupByElement.set(el, () => el.removeEventListener("click", handler));
+  },
+
+  updated(el, binding) {
+    valueByElement.set(el, binding.value);
   },
 
   unmounted(el) {
-    el[CLEANUP]?.();
-    el[CLEANUP] = undefined;
+    cleanupByElement.get(el)?.();
+    cleanupByElement.delete(el);
+    valueByElement.delete(el);
   },
 };
+
+export default clipboard;

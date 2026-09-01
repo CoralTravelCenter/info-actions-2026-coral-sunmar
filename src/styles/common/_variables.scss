@@ -120,7 +120,7 @@
   /* === Сетка === */
   --screen-sm: 428px; // mobile
   --screen-md: 768px; // tablet (portrait)
-  --screen-lg: 1024px; // tablet (landscape) / small laptop
+  --screen-lg: 992px; // desktop
   --screen-xl: 1280px; // desktop
   --screen-2xl: 1440px;
   --grid_desktop_L_content: 1368px;
@@ -180,6 +180,6 @@
 
 $screen-sm: 428px; // mobile
 $screen-md: 768px; // tablet (portrait)
-$screen-lg: 1024px; // tablet (landscape) / small laptop
+$screen-lg: 992px; // desktop
 $screen-xl: 1280px; // desktop
 $screen-2xl: 1440px;

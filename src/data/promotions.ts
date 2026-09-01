@@ -1,5 +1,3 @@
-import type {PromotionConfigInput} from "../types/promotion";
-
 const GLOBAL_KEY = "_promotion_settings";
 
 declare global {
@@ -8,32 +6,16 @@ declare global {
   }
 }
 
-function readGlobal(): PromotionConfigInput[] | null {
+function readGlobal(): unknown[] | null {
   const value = window[GLOBAL_KEY];
-  return Array.isArray(value) && value.length
-    ? (value as PromotionConfigInput[])
-    : null;
+  return Array.isArray(value) && value.length ? value : null;
 }
 
-/**
- * Возвращает сырой список акций: внешний конфиг на проде или DEV-фикстуру.
- * Проверка отдельных записей выполняется в `normalizePromotions`.
- */
-export async function loadPromotions(): Promise<PromotionConfigInput[]> {
-  const external = readGlobal();
-  if (external) return external;
+/** Читает конфиг, подключённый до запуска Vue-приложения. */
+export function getPromotions(): unknown[] {
+  const promotions = readGlobal();
+  if (promotions) return promotions;
 
-  if (import.meta.env.DEV) {
-    const {PROMOTIONS_DEV} = await import("./promotions.dev.js");
-    console.info(
-      `[info-actions] window.${GLOBAL_KEY} не найден — используется dev-фикстура ` +
-        `(${PROMOTIONS_DEV.length} записей). На проде данные придут из внешнего скрипта.`,
-    );
-    return PROMOTIONS_DEV as PromotionConfigInput[];
-  }
-
-  console.warn(
-    `[info-actions] window.${GLOBAL_KEY} не найден — акции не отрисованы.`,
-  );
+  console.warn(`[info-actions] window.${GLOBAL_KEY} не найден — акции не отрисованы.`);
   return [];
 }

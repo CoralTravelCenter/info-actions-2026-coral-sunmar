@@ -1,3 +1,76 @@
+@use '../styles/common/mixins';
+
 #info-actions {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cards-container {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include mixins.flex-grid(1, 24px, center);
+
+  @media (width >= 768px) {
+    @include mixins.flex-grid(2, 24px, start);
+  }
+
+  @media (width >= 1280px) {
+    @include mixins.flex-grid(4, 24px, start);
+  }
+}
+
+.cards-empty {
+  margin: 24px 0;
+  text-align: center;
+}
+
+.config-warning {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1000;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 12px;
+  width: min(420px, calc(100vw - 32px));
+  padding: 16px;
+  background: #fff;
+  border-left: 4px solid #faad14;
+  border-radius: 8px;
+  box-shadow: 0 6px 24px rgb(0 0 0 / 18%);
+
+  ul {
+    margin: 8px 0 0;
+    padding-left: 18px;
+  }
+
+  &__icon {
+    color: #faad14;
+  }
+
+  &__close {
+    align-self: start;
+    padding: 0 4px;
+    font-size: 20px;
+    line-height: 1;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+  }
+}
+
+button.show-more {
+  width: fit-content;
+  margin: 24px auto;
+  border-radius: 8px;
+}
+
+:global([data-brand='sunmar']) .cards-container {
+  @media (width >= 1280px) {
+    @include mixins.flex-grid(3, 24px, start);
+  }
 }

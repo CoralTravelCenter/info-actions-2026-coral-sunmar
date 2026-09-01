@@ -7,20 +7,25 @@
     "dev": "b2c-landing-vite dev",
     "build": "b2c-landing-vite build",
     "check": "b2c-landing-vite check && vue-tsc --noEmit",
+    "check:production-config": "node tools/check-production-config.mjs",
+    "test": "vitest",
+    "test:run": "vitest run",
     "typecheck": "vue-tsc --noEmit",
     "block:add": "b2c-landing-vite block:add",
-    "block:rename": "b2c-landing-vite block:rename"
+    "block:rename": "b2c-landing-vite block:rename",
+    "deploy": "b2c-landing-vite deploy",
+    "deploy:section": "b2c-landing-vite deploy --section",
+    "deploy:assets": "b2c-landing-vite deploy assets"
   },
   "dependencies": {
-    "@ant-design/icons-vue": "^7.0.1",
     "@vueuse/core": "^13.7.0",
-    "ant-design-vue": "^4.2.6",
     "dayjs": "^1.11.13"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.8",
     "sass": "^1.102.0",
     "typescript": "~5.9.3",
+    "vitest": "^4.1.11",
     "vue": "^3.5.41",
     "vue-tsc": "^3.3.9"
   }

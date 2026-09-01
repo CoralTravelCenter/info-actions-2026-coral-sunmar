@@ -1,14 +1,14 @@
-/**
- * Конфиг одной акции, получаемый из внешнего источника.
- *
- * `name` и `visual` обязательны для рендера. Остальные поля опциональны:
- * отсутствие значения является допустимым состоянием и обрабатывается UI.
- */
+export interface PromotionAnalyticsConfig {
+  bonusImpression?: boolean;
+}
+
+/** Сырой объект акции из внешнего конфига. */
 export interface PromotionConfig {
+  id?: string;
   name: string;
   visual: string;
-  id?: string;
   filter?: string | string[];
+  filters?: string[];
   description?: string;
   url?: string;
   promo_start?: string;
@@ -16,16 +16,31 @@ export interface PromotionConfig {
   promo_end_text?: string;
   erid?: string;
   app_erid?: string;
-  /** Историческое имя поля. После миграции внешнего конфига заменить на `legal`. */
+  legal?: string;
+  /** Историческое имя; поддерживается до миграции внешнего конфига. */
   ligal?: string;
-  entry_point?: string;
+  analytics?: PromotionAnalyticsConfig;
 }
 
-/** Акция после проверки и нормализации, готовая к рендеру. */
-export interface Promotion extends PromotionConfig {
+/** Полностью нормализованная внутренняя модель. */
+export interface Promotion {
   id: string;
-  filtersArr: string[];
-  isBonus: boolean;
+  name: string;
+  nameText: string;
+  nameHtml: string;
+  descriptionHtml: string;
+  visual: string;
+  url: string;
+  filters: string[];
+  legal: string;
+  erid: string;
+  appErid: string;
+  promoStart: string;
+  promoEnd: string;
+  promoEndText: string;
+  analytics: {
+    bonusImpression: boolean;
+  };
 }
 
 export type PromotionConfigInput = Partial<PromotionConfig>;

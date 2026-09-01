@@ -21,35 +21,6 @@
   }
 }
 
-@mixin hero-layout {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  align-items: start;
-  margin: 0 auto;
-  padding-block: calc(var(--padding_XXXL) / 2);
-}
-
-@mixin hero-layout-full-width {
-  position: relative;
-
-  > article .contenu {
-    position: relative;
-    z-index: 2;
-  }
-
-  &::after {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    z-index: 1;
-    width: 100vw;
-    height: 100%;
-    transform: translateX(-50%);
-    content: '';
-  }
-}
-
 @mixin vimeo-responsive {
   position: absolute;
   top: 0;
@@ -126,7 +97,7 @@ $child - задаем тег, для которого хотим повысит�
 Использует @media (min-width: ...)
 @param {String} $breakpoint — ключ одного из брейкпоинтов:
 - md:   768px
-- lg:  1024px
+- lg:   992px
 - xl:  1280px
 - 2xl: 1440px
 */
