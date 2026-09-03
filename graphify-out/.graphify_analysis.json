@@ -1,0 +1,387 @@
+{
+  "communities": {
+    "0": [
+      "ref_dom",
+      "ref_dom_iterable",
+      "ref_es2022",
+      "ref_src_d_ts",
+      "ref_src_ts",
+      "ref_src_vue",
+      "ref_vite_client",
+      "tsconfig",
+      "tsconfig_compileroptions",
+      "tsconfig_compileroptions_allowjs",
+      "tsconfig_compileroptions_checkjs",
+      "tsconfig_compileroptions_esmoduleinterop",
+      "tsconfig_compileroptions_isolatedmodules",
+      "tsconfig_compileroptions_lib",
+      "tsconfig_compileroptions_module",
+      "tsconfig_compileroptions_moduleresolution",
+      "tsconfig_compileroptions_noemit",
+      "tsconfig_compileroptions_resolvejsonmodule",
+      "tsconfig_compileroptions_skiplibcheck",
+      "tsconfig_compileroptions_strict",
+      "tsconfig_compileroptions_target",
+      "tsconfig_compileroptions_types",
+      "tsconfig_compileroptions_usedefineforclassfields",
+      "tsconfig_include"
+    ],
+    "1": [
+      "dayjs",
+      "package",
+      "package_dependencies",
+      "package_dependencies_dayjs",
+      "package_dependencies_vueuse_core",
+      "package_name",
+      "package_private",
+      "package_scripts",
+      "package_scripts_block_add",
+      "package_scripts_block_rename",
+      "package_scripts_build",
+      "package_scripts_check",
+      "package_scripts_check_production_config",
+      "package_scripts_deploy",
+      "package_scripts_deploy_assets",
+      "package_scripts_deploy_section",
+      "package_scripts_dev",
+      "package_scripts_test",
+      "package_scripts_test_run",
+      "package_scripts_typecheck",
+      "package_type",
+      "package_version",
+      "vueuse_core"
+    ],
+    "2": [
+      "src_config_brand",
+      "src_config_brand_analytics_brand",
+      "src_config_brand_bonusgoalparams",
+      "src_config_brand_brand_options",
+      "src_config_brand_detectbrand",
+      "src_config_brand_metrika",
+      "src_config_brand_metrika_by_brand",
+      "src_config_brand_reachbonusgoal",
+      "src_config_brand_test",
+      "src_config_brand_window",
+      "src_config_brand_ymfunction",
+      "src_directives_ymbonus_directive",
+      "src_directives_ymbonus_directive_bonusbindingvalue",
+      "src_directives_ymbonus_directive_normalize",
+      "src_directives_ymbonus_directive_normalizedbonusbinding",
+      "src_directives_ymbonus_directive_observe",
+      "src_directives_ymbonus_directive_sentpromotionids",
+      "src_directives_ymbonus_directive_stopbyelement",
+      "src_directives_ymbonus_directive_test",
+      "src_directives_ymbonus_directive_test_intersectioncallbacks",
+      "src_directives_ymbonus_directive_test_reachbonusgoal",
+      "src_directives_ymbonus_directive_ymbonus"
+    ],
+    "3": [
+      "src_components_infoactions_infoactions",
+      "src_components_infoactions_infoactions_arewarningsvisible",
+      "src_components_infoactions_infoactions_brand_geterid_publishpromotionclick",
+      "src_components_infoactions_infoactions_currentfilter_filteredpromotions_filters_haspromotions_invalidpromotions",
+      "src_components_infoactions_infoactions_isdesktop",
+      "src_components_infoactions_infoactions_istablet",
+      "src_components_infoactions_infoactions_nextpagecount_remainingcount_showmore_visibleitems_visiblepromotions",
+      "src_components_infoactions_infoactions_pagesize",
+      "src_components_infoactions_infoactions_rawpromotions",
+      "src_components_infoactions_infoactions_showwarnings",
+      "src_composables_usepromotionpagination",
+      "src_composables_usepromotionpagination_test",
+      "src_composables_usepromotionpagination_usepromotionpagination",
+      "src_composables_usepromotionpagination_usepromotionpagination_showmore",
+      "src_data_promotions",
+      "src_data_promotions_getpromotions",
+      "src_data_promotions_readglobal",
+      "src_data_promotions_window",
+      "src_utils_configwarnings",
+      "src_utils_configwarnings_collectconfigwarnings",
+      "src_utils_configwarnings_iswarningsvisible"
+    ],
+    "4": [
+      "src_data_promoschema",
+      "src_data_promoschema_createpromotionid",
+      "src_data_promoschema_escapehtml",
+      "src_data_promoschema_hashstring",
+      "src_data_promoschema_htmltotext",
+      "src_data_promoschema_isbonuspromotion",
+      "src_data_promoschema_ispromotionconfiginput",
+      "src_data_promoschema_missingrequired",
+      "src_data_promoschema_normalizepromotion",
+      "src_data_promoschema_normalizepromotions",
+      "src_data_promoschema_normalizestring",
+      "src_data_promoschema_parsefilters",
+      "src_data_promoschema_required_fields",
+      "src_data_promoschema_sanitizepromotionhtml",
+      "src_data_promoschema_test",
+      "src_types_promotion",
+      "src_types_promotion_invalidpromotion",
+      "src_types_promotion_normalizedpromotions",
+      "src_types_promotion_promotionanalyticsconfig",
+      "src_types_promotion_promotionconfig",
+      "src_types_promotion_promotionconfiginput"
+    ],
+    "5": [
+      "src_components_infoactions_tabs_tabs",
+      "src_components_infoactions_tabs_tabs_anchorref",
+      "src_components_infoactions_tabs_tabs_anchorstyle_isfixed_isvisible_navigationstyle",
+      "src_components_infoactions_tabs_tabs_isscrollablenavigation",
+      "src_components_infoactions_tabs_tabs_listref",
+      "src_components_infoactions_tabs_tabs_model",
+      "src_components_infoactions_tabs_tabs_navigationref",
+      "src_composables_usefixednavigation",
+      "src_composables_usefixednavigation_fixednavigationoptions",
+      "src_composables_usefixednavigation_navigationstate",
+      "src_composables_usefixednavigation_navigationstateinput",
+      "src_composables_usefixednavigation_resolvenavigationstate",
+      "src_composables_usefixednavigation_test",
+      "src_composables_usefixednavigation_test_fixedvisible",
+      "src_composables_usefixednavigation_usefixednavigation",
+      "src_composables_usefixednavigation_usefixednavigation_measure"
+    ],
+    "6": [
+      "src_components_infoactions_card_card",
+      "src_components_infoactions_card_card_canhover",
+      "src_components_infoactions_card_card_closeonfocusout",
+      "src_components_infoactions_card_card_closeonhover",
+      "src_components_infoactions_card_card_copied",
+      "src_components_infoactions_card_card_emit",
+      "src_components_infoactions_card_card_enddate",
+      "src_components_infoactions_card_card_eriddisclosureref",
+      "src_components_infoactions_card_card_eridpopoverid",
+      "src_components_infoactions_card_card_iseridopen",
+      "src_components_infoactions_card_card_legaldetails",
+      "src_components_infoactions_card_card_openonhover",
+      "src_components_infoactions_card_card_props",
+      "src_components_infoactions_card_card_start_schedulehoverclose_stop_cancelhoverclose",
+      "src_components_infoactions_card_card_toggleonclick"
+    ],
+    "7": [
+      "src_data_promotion_settings",
+      "src_directives_clipboard_directive",
+      "src_directives_clipboard_directive_cleanupbyelement",
+      "src_directives_clipboard_directive_clipboard",
+      "src_directives_clipboard_directive_clipboardbindingvalue",
+      "src_directives_clipboard_directive_clipboardoptions",
+      "src_directives_clipboard_directive_copylegacy",
+      "src_directives_clipboard_directive_copymodern",
+      "src_directives_clipboard_directive_resolvetext",
+      "src_directives_clipboard_directive_valuebyelement",
+      "src_scripts_info_actions",
+      "src_scripts_info_actions_infoactions",
+      "src_scripts_utils_hostreactappready",
+      "src_scripts_utils_hostreactappready_hostreactappready"
+    ],
+    "8": [
+      "package_devdependencies",
+      "package_devdependencies_sass",
+      "package_devdependencies_typescript",
+      "package_devdependencies_vitejs_plugin_vue",
+      "package_devdependencies_vitest",
+      "package_devdependencies_vue",
+      "package_devdependencies_vue_tsc",
+      "sass",
+      "typescript",
+      "vitejs_plugin_vue",
+      "vitest",
+      "vue",
+      "vue_tsc"
+    ],
+    "9": [
+      "src_analytics_promotionevents",
+      "src_analytics_promotionevents_dispatchpromotionclick",
+      "src_analytics_promotionevents_promotion_click_event",
+      "src_analytics_promotionevents_promotionclickdetail",
+      "src_composables_usepromotioncontext",
+      "src_composables_usepromotioncontext_promotiondestination",
+      "src_composables_usepromotioncontext_resolveerid",
+      "src_composables_usepromotioncontext_test",
+      "src_composables_usepromotioncontext_usepromotioncontext",
+      "src_composables_usepromotioncontext_usepromotioncontext_geterid",
+      "src_composables_usepromotioncontext_usepromotioncontext_publishpromotionclick",
+      "src_config_brand_brand",
+      "src_types_promotion_promotion"
+    ],
+    "10": [
+      "src_composables_usepromotions",
+      "src_composables_usepromotions_ending_soon_filter",
+      "src_composables_usepromotions_test",
+      "src_composables_usepromotions_usepromotions",
+      "src_utils_filterfreshoffers",
+      "src_utils_filterfreshoffers_filterfreshoffers",
+      "src_utils_filterfreshoffers_getpromotionendtimestamp",
+      "src_utils_filterfreshoffers_isendingsoon",
+      "src_utils_filterfreshoffers_parsemsk",
+      "src_utils_filterfreshoffers_test"
+    ],
+    "11": [
+      "tools_check_production_config",
+      "tools_check_production_config_entrypath",
+      "tools_check_production_config_outputpath"
+    ],
+    "12": [
+      "landing_config"
+    ]
+  },
+  "cohesion": {
+    "0": 0.08333333333333333,
+    "1": 0.08695652173913043,
+    "2": 0.10822510822510822,
+    "3": 0.12380952380952381,
+    "4": 0.20952380952380953,
+    "5": 0.15,
+    "6": 0.14285714285714285,
+    "7": 0.17582417582417584,
+    "8": 0.15384615384615385,
+    "9": 0.23076923076923078,
+    "10": 0.4888888888888889,
+    "11": 0.6666666666666666,
+    "12": 1.0
+  },
+  "gods": [
+    {
+      "id": "tsconfig_compileroptions",
+      "label": "compilerOptions",
+      "degree": 15
+    },
+    {
+      "id": "package_scripts",
+      "label": "scripts",
+      "degree": 13
+    },
+    {
+      "id": "src_data_promoschema_normalizepromotions",
+      "label": "normalizePromotions()",
+      "degree": 9
+    },
+    {
+      "id": "src_data_promoschema_normalizestring",
+      "label": "normalizeString()",
+      "degree": 9
+    },
+    {
+      "id": "src_types_promotion_promotion",
+      "label": "Promotion",
+      "degree": 8
+    },
+    {
+      "id": "src_composables_usepromotions_usepromotions",
+      "label": "usePromotions()",
+      "degree": 7
+    },
+    {
+      "id": "src_data_promoschema_normalizepromotion",
+      "label": "normalizePromotion()",
+      "degree": 7
+    },
+    {
+      "id": "src_utils_filterfreshoffers_filterfreshoffers",
+      "label": "filterFreshOffers()",
+      "degree": 5
+    },
+    {
+      "id": "src_utils_filterfreshoffers_isendingsoon",
+      "label": "isEndingSoon()",
+      "degree": 5
+    },
+    {
+      "id": "src_data_promoschema_sanitizepromotionhtml",
+      "label": "sanitizePromotionHtml()",
+      "degree": 5
+    }
+  ],
+  "surprises": [
+    {
+      "source": "PromotionClickDetail",
+      "target": "Promotion",
+      "source_files": [
+        "src/analytics/promotionEvents.ts",
+        "src/types/promotion.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "peripheral node `PromotionClickDetail` unexpectedly reaches hub `Promotion`"
+    },
+    {
+      "source": "usePromotions()",
+      "target": "normalizePromotions()",
+      "source_files": [
+        "src/composables/usePromotions.ts",
+        "src/data/promoSchema.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "usePromotions()",
+      "target": "filterFreshOffers()",
+      "source_files": [
+        "src/composables/usePromotions.ts",
+        "src/utils/filterFreshOffers.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "cross-file semantic connection"
+    },
+    {
+      "source": "usePromotions()",
+      "target": "getPromotionEndTimestamp()",
+      "source_files": [
+        "src/composables/usePromotions.ts",
+        "src/utils/filterFreshOffers.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "cross-file semantic connection"
+    },
+    {
+      "source": "usePromotions()",
+      "target": "isEndingSoon()",
+      "source_files": [
+        "src/composables/usePromotions.ts",
+        "src/utils/filterFreshOffers.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "cross-file semantic connection"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `Promotion` connect `Community 9` to `Community 10`, `Community 3`, `Community 4`, `Community 6`?",
+      "why": "High betweenness centrality (0.045) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `usePromotions()` connect `Community 10` to `Community 3`, `Community 4`?",
+      "why": "High betweenness centrality (0.018) - this node is a cross-community bridge."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 2 inferred relationships involving `normalizeString()` (e.g. with `isBonusPromotion()` and `parseFilters()`) actually correct?",
+      "why": "`normalizeString()` has 2 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `BonusGoalParams`, `Window`, `YmFunction` to the rest of the system?",
+      "why": "96 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 0` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.08333333333333333 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 1` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.08695652173913043 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 2` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.10822510822510822 - nodes in this community are weakly interconnected."
+    }
+  ]
+}
