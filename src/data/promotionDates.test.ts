@@ -1,6 +1,6 @@
 import {describe, expect, it} from "vitest";
 
-import {filterFreshOffers, isEndingSoon} from "./filterFreshOffers";
+import {filterFreshOffers, isEndingSoon} from "./promotionDates";
 
 describe("filterFreshOffers", () => {
   it("считает московские границы включительно", () => {

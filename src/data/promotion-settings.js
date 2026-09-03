@@ -12,7 +12,6 @@ window._promotion_settings = [
         "erid": "2W5zFK1AQPb",
         "promo_end_text": "до 02.09.2026",
         "promo_end": "2026-09-02 23:59",
-        "entry_point": ""
     },
     {
         "filter": "По направлениям",
@@ -24,7 +23,6 @@ window._promotion_settings = [
         "erid": "2W5zFFzDCB3",
         "promo_end_text": "до 24.09.2026",
         "promo_end": "2026-09-24 23:59",
-        "entry_point": "asian_weeks"
     },
     {
         "filter": "По направлениям",
@@ -36,7 +34,6 @@ window._promotion_settings = [
         "erid": "2W5zFGzH8W5",
         "promo_end_text": "до 14.09.2026",
         "promo_end": "2026-09-14 23:59",
-        "entry_point": ""
     },
     {
         "filter": "По направлениям",
@@ -48,7 +45,6 @@ window._promotion_settings = [
         "erid": "2W5zFGka6h7",
         "promo_end_text": "до 14.09.2026",
         "promo_end": "2026-09-14 23:59",
-        "entry_point": "ny_normal_27"
     },
     {
         "filter": "По направлениям",
@@ -60,7 +56,6 @@ window._promotion_settings = [
         "erid": "2W5zFHF1xe5",
         "promo_end_text": "до 10.08.2026",
         "promo_end": "2026-08-10 12:59",
-        "entry_point": ""
     },
     {
         "filter": "По направлениям",
@@ -72,7 +67,6 @@ window._promotion_settings = [
         "erid": "2W5zFGiAKhK",
         "promo_end_text": "до 20.07.2026",
         "promo_end": "2026-07-20 23:59",
-        "entry_point": ""
     },
     {
         "filter": "По направлениям",
@@ -84,7 +78,6 @@ window._promotion_settings = [
         "erid": "2W5zFGtQVXX",
         "promo_end_text": "до 20.07.2026",
         "promo_end": "2026-07-20 23:59",
-        "entry_point": "june_26"
     },
     {
         "filter": "По направлениям",
@@ -96,7 +89,6 @@ window._promotion_settings = [
         "erid": "2W5zFJhu5vq",
         "promo_end_text": "до 31.07.2026",
         "promo_end": "2026-07-31 23:59",
-        "entry_point": ""
     },
     {
         "filter": "По направлениям",
@@ -108,7 +100,6 @@ window._promotion_settings = [
         "erid": "2W5zFGF5Nd7",
         "promo_end_text": "до 31.10.2026",
         "promo_end": "2026-10-31 23:59",
-        "entry_point": ""
     },
     {
         "filter": "По направлениям",
@@ -120,7 +111,6 @@ window._promotion_settings = [
         "erid": "2W5zFGrijrh",
         "promo_end_text": "до 23.05.2026",
         "promo_end": "2026-05-23 23:59",
-        "entry_point": ""
     },
     {
         "filter": "По направлениям, Акции отелей",
@@ -132,7 +122,6 @@ window._promotion_settings = [
         "erid": "2W5zFGKgVZz",
         "promo_end_text": "до 31.10.26",
         "promo_end": "2026-10-31 23:59",
-        "entry_point": ""
     },
     {
         "filter": "CoralBonus",
@@ -144,7 +133,6 @@ window._promotion_settings = [
         "erid": "2W5zFHKKtbs",
         "promo_end_text": "до 31.12.2026",
         "promo_end": "2026-12-31 23:59",
-        "entry_point": ""
     },
     {
         "filter": "CoralBonus",
@@ -156,7 +144,6 @@ window._promotion_settings = [
         "erid": "2W5zFHd85Tw",
         "promo_end_text": "до 31.01.2027",
         "promo_end": "2027-01-31 23:59",
-        "entry_point": ""
     },
     {
         "filter": "CoralBonus",
@@ -168,7 +155,6 @@ window._promotion_settings = [
         "erid": "2W5zFHuRwZj",
         "promo_end_text": "до 31.10.2026",
         "promo_end": "2026-10-31 23:59",
-        "entry_point": ""
     },
     {
         "filter": "CoralBonus",
@@ -180,7 +166,6 @@ window._promotion_settings = [
         "erid": "2W5zFJ4KsFo",
         "promo_end_text": "до 31.01.2027",
         "promo_end": "2027-01-31 23:59",
-        "entry_point": ""
     },
     {
         "filter": "CoralBonus",
@@ -192,7 +177,6 @@ window._promotion_settings = [
         "erid": "2W5zFJmejXf",
         "promo_end_text": "до 30.09.2026",
         "promo_end": "2026-09-30 23:59",
-        "entry_point": ""
     },
     {
         "filter": "CoralBonus",
@@ -204,7 +188,6 @@ window._promotion_settings = [
         "erid": "2W5zFHXdH29",
         "promo_end_text": "до 20.09.2026",
         "promo_end": "2026-09-20 23:59",
-        "entry_point": ""
     },
     {
         "filter": "CoralBonus",
@@ -216,7 +199,6 @@ window._promotion_settings = [
         "erid": "2W5zFGgTCaV",
         "promo_end_text": "до 20.09.2026",
         "promo_end": "2026-09-20 23:59",
-        "entry_point": ""
     },
     {
         "filter": "CoralBonus",
@@ -227,7 +209,6 @@ window._promotion_settings = [
         "ligal": "ООО «КОРТРЕВЕЛ МАРКЕТ» ИНН 7703263207",
         "erid": "2W5zFG4WP93",
         "promo_end_text": "Бессрочно",
-        "entry_point": ""
     },
     {
         "filter": "CoralBonus",
@@ -239,7 +220,6 @@ window._promotion_settings = [
         "erid": "2W5zFGRGD5s",
         "promo_end_text": "до 20.09.2026",
         "promo_end": "2026-09-20 23:59",
-        "entry_point": ""
     },
     {
         "filter": "CoralBonus",
@@ -251,7 +231,6 @@ window._promotion_settings = [
         "erid": "2W5zFJYKWxR",
         "promo_end_text": "до 20.09.2026",
         "promo_end": "2026-09-20 23:59",
-        "entry_point": ""
     },
     {
         "filter": "CoralBonus",
@@ -263,7 +242,6 @@ window._promotion_settings = [
         "erid": "2W5zFGFVY5X",
         "promo_end_text": "до 20.09.2026",
         "promo_end": "2026-09-20 23:59",
-        "entry_point": ""
     },
     {
         "filter": "CoralBonus",
@@ -275,7 +253,6 @@ window._promotion_settings = [
         "erid": "2W5zFGp7GH7",
         "promo_end_text": "до 31.10.2026",
         "promo_end": "2026-10-31 23:59",
-        "entry_point": ""
     },
     {
         "filter": "CoralBonus",
@@ -287,7 +264,6 @@ window._promotion_settings = [
         "erid": "2W5zFHF3arM",
         "promo_end_text": "до 20.09.2026",
         "promo_end": "2026-09-20 23:59",
-        "entry_point": ""
     },
     {
         "filter": "CoralBonus",
@@ -299,7 +275,6 @@ window._promotion_settings = [
         "erid": "2W5zFGdTt65",
         "promo_end_text": "до 31.03.2026",
         "promo_end": "2026-03-31 23:59",
-        "entry_point": ""
     },
     {
         "filter": "CoralBonus",
@@ -311,7 +286,6 @@ window._promotion_settings = [
         "erid": "2W5zFJYiTnp",
         "promo_end_text": "до 20.09.2026",
         "promo_end": "2026-09-20 23:59",
-        "entry_point": ""
     },
     {
         "filter": "CoralBonus",
@@ -323,7 +297,6 @@ window._promotion_settings = [
         "erid": "2W5zFJSf7qi",
         "promo_end_text": "до 20.09.2026",
         "promo_end": "2026-09-20 23:59",
-        "entry_point": ""
     },
     {
         "filter": "По направлениям",
@@ -334,7 +307,6 @@ window._promotion_settings = [
         "ligal": "ООО «Центрбронь»",
         "erid": "2W5zFFv4ggg",
         "promo_end_text": "Бессрочно",
-        "entry_point": ""
     },
     {
         "filter": "Акции отелей",
@@ -345,7 +317,6 @@ window._promotion_settings = [
         "ligal": "ООО «Центрбронь»",
         "erid": "2W5zFGf4Krg",
         "promo_end_text": "Бессрочно",
-        "entry_point": ""
     },
     {
         "filter": "Акции отелей",
@@ -356,7 +327,6 @@ window._promotion_settings = [
         "ligal": "ООО «Центрбронь»",
         "erid": "2W5zFHqFkpY",
         "promo_end_text": "Бессрочно",
-        "entry_point": ""
     },
     {
         "filter": "Акции отелей",
@@ -367,6 +337,5 @@ window._promotion_settings = [
         "ligal": "ООО «Центрбронь»",
         "erid": "2W5zFHz9gWc",
         "promo_end_text": "Бессрочно",
-        "entry_point": ""
     }
 ]

@@ -7,7 +7,7 @@ import {
   filterFreshOffers,
   getPromotionEndTimestamp,
   isEndingSoon,
-} from "../utils/filterFreshOffers";
+} from "../data/promotionDates";
 
 const ALL_FILTER = "Все акции";
 export const ENDING_SOON_FILTER = "Скоро закончатся";

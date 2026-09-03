@@ -8,7 +8,7 @@ import InfoActions from "../components/InfoActions/InfoActions.vue";
 import {BRAND} from "../config/brand";
 import ymBonus from "../directives/ymbonus.directive";
 import Clipboard from "../directives/clipboard.directive";
-import {hostReactAppReady} from "./utils/hostReactAppReady.js";
+import {hostReactAppReady} from "./hostReactAppReady.js";
 
 export default async function infoActions() {
     await hostReactAppReady()

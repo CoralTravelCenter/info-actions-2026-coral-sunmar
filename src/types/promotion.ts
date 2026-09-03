@@ -7,7 +7,9 @@ export interface PromotionConfig {
   id?: string;
   name: string;
   visual: string;
+  /** Историческое поле; поддерживается до миграции внешнего конфига. */
   filter?: string | string[];
+  /** Канонический формат фильтров. */
   filters?: string[];
   description?: string;
   url?: string;

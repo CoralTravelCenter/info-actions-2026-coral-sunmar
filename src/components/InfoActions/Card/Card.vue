@@ -13,12 +13,14 @@ const props = withDefaults(defineProps<{
   promotion: Promotion;
   brand: "coral" | "sunmar";
   erid?: string;
+  prioritizeImage?: boolean;
 }>(), {
   erid: "",
+  prioritizeImage: false,
 });
 
 const emit = defineEmits<{
-  "promotion-click": [destination: "link" | "popup"];
+  "promotion-click": [];
 }>();
 
 const copied = refAutoReset(false, 1500);
@@ -137,7 +139,7 @@ useEventListener(window, "scroll", () => {
               height="16"
               viewBox="0 0 24 24"
               fill="none"
-              :stroke="copied ? '#52c41a' : '#535353'"
+              :stroke="copied ? 'var(--color_Status_Success)' : 'var(--color_Header_Icon)'"
               stroke-width="2"
             >
               <rect x="9" y="9" width="11" height="11" rx="2" />
@@ -159,7 +161,8 @@ useEventListener(window, "scroll", () => {
           :alt="promotion.nameText || 'Промо'"
           width="324"
           height="180"
-          loading="lazy"
+          :loading="prioritizeImage ? 'eager' : 'lazy'"
+          :fetchpriority="prioritizeImage ? 'high' : 'auto'"
           decoding="async"
         >
       </div>
@@ -179,8 +182,8 @@ useEventListener(window, "scroll", () => {
                 viewBox="0 0 22 22"
                 fill="none"
               >
-                <circle cx="11" cy="11" r="10" stroke="#535353" stroke-linejoin="round" />
-                <path d="M11 4V11H16" stroke="#535353" stroke-linejoin="round" />
+                <circle cx="11" cy="11" r="10" stroke="var(--color_Header_Icon)" stroke-linejoin="round" />
+                <path d="M11 4V11H16" stroke="var(--color_Header_Icon)" stroke-linejoin="round" />
               </svg>
               <svg
                 v-else
@@ -194,15 +197,15 @@ useEventListener(window, "scroll", () => {
                   cx="12"
                   cy="12"
                   r="9"
-                  fill="#2E3465"
+                  fill="var(--color_Sunmar_Primary)"
                   fill-opacity="0.2"
-                  stroke="#2E3465"
+                  stroke="var(--color_Sunmar_Primary)"
                   stroke-width="1.5"
                   stroke-linejoin="round"
                 />
                 <path
                   d="M12 5.69995V12H16.5"
-                  stroke="#2E3465"
+                  stroke="var(--color_Sunmar_Primary)"
                   stroke-width="1.5"
                   stroke-linejoin="round"
                 />
@@ -221,7 +224,7 @@ useEventListener(window, "scroll", () => {
             :aria-label="`Подробнее: ${promotion.nameText}`"
             target="_blank"
             rel="noopener noreferrer"
-            @click="emit('promotion-click', 'link')"
+            @click="emit('promotion-click')"
           >
             Подробнее
           </a>
@@ -231,7 +234,7 @@ useEventListener(window, "scroll", () => {
             type="button"
             class="promo-card__link prime-btn js-popup-trigger"
             :aria-label="`Подробнее: ${promotion.nameText}`"
-            @click="emit('promotion-click', 'popup')"
+            @click="emit('promotion-click')"
           >
             Подробнее
           </button>

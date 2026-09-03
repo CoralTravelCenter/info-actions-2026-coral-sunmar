@@ -7,7 +7,7 @@ import {usePromotionPagination} from "../../composables/usePromotionPagination";
 import {usePromotions} from "../../composables/usePromotions";
 import {getPromotions} from "../../data/promotions";
 import type {Promotion} from "../../types/promotion";
-import {collectConfigWarnings, isWarningsVisible} from "../../utils/configWarnings";
+import {collectConfigWarnings, isWarningsVisible} from "../../data/promotionDiagnostics";
 import Card from "./Card/Card.vue";
 import Tabs from "./Tabs/Tabs.vue";
 
@@ -28,7 +28,11 @@ const {
 	showMore,
 	visibleItems: visiblePromotions,
 } = usePromotionPagination<Promotion>(filteredPromotions, pageSize, currentFilter);
-const {brand, getErid, publishPromotionClick} = usePromotionContext(currentFilter);
+const {brand, getErid, publishPromotionClick} = usePromotionContext();
+const priorityImageCount = computed(() => {
+	if (isDesktop.value) return brand === "sunmar" ? 3 : 4;
+	return isTablet.value ? 2 : 1;
+});
 const showWarnings = isWarningsVisible();
 const configWarnings = showWarnings
 		? collectConfigWarnings(rawPromotions, invalidPromotions)
@@ -81,8 +85,9 @@ const areWarningsVisible = ref(configWarnings.length > 0);
 				class="card"
 				:brand="brand"
 				:erid="getErid(promotion)"
+				:prioritize-image="index < priorityImageCount"
 				:promotion="promotion"
-				@promotion-click="destination => publishPromotionClick(promotion, index + 1, destination)"
+				@promotion-click="publishPromotionClick(promotion)"
 		/>
 	</ul>
 

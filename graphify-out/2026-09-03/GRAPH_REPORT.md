@@ -1,7 +1,8 @@
 # Graph Report - info-actions-2026-coral-sunmar  (2026-09-03)
 
 ## Corpus Check
-- cluster-only mode — file stats not available
+- 40 files · ~15,464 words
+- Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
 - 337 nodes · 414 edges · 20 communities (19 shown, 1 thin omitted)
@@ -37,25 +38,25 @@
 ## God Nodes (most connected - your core abstractions)
 1. `compilerOptions` - 15 edges
 2. `scripts` - 13 edges
-3. `normalizePromotions()` - 9 edges
-4. `normalizeString()` - 9 edges
+3. `normalizeString()` - 9 edges
+4. `normalizePromotions()` - 9 edges
 5. `Promotion` - 8 edges
-6. `3. Проблема с Яндекс.Метрикой на продакшене` - 8 edges
-7. `Model routing` - 8 edges
+6. `Model routing` - 8 edges
+7. `3. Проблема с Яндекс.Метрикой на продакшене` - 8 edges
 8. `usePromotions()` - 7 edges
-9. `collectConfigDiagnostics()` - 7 edges
-10. `normalizePromotion()` - 7 edges
+9. `normalizePromotion()` - 7 edges
+10. `collectConfigDiagnostics()` - 7 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `PromotionClickDetail` --references--> `Promotion`  [EXTRACTED]
   src/analytics/promotionEvents.ts → src/types/promotion.ts
 - `usePromotions()` --calls--> `normalizePromotions()`  [EXTRACTED]
   src/composables/usePromotions.ts → src/data/promoSchema.ts
+- `publishPromotionClick()` --calls--> `dispatchPromotionClick()`  [EXTRACTED]
+  src/composables/usePromotionContext.ts → src/analytics/promotionEvents.ts
 - `usePromotions()` --calls--> `filterFreshOffers()`  [EXTRACTED]
   src/composables/usePromotions.ts → src/utils/filterFreshOffers.ts
 - `usePromotions()` --calls--> `getPromotionEndTimestamp()`  [EXTRACTED]
-  src/composables/usePromotions.ts → src/utils/filterFreshOffers.ts
-- `usePromotions()` --calls--> `isEndingSoon()`  [EXTRACTED]
   src/composables/usePromotions.ts → src/utils/filterFreshOffers.ts
 
 ## Import Cycles
@@ -147,7 +148,7 @@ Cohesion: 0.22
 Nodes (8): info-actions-2026, Аналитика кликов, Блоки (`src/order.json`), Документация, Источник данных об акциях, Отличия от версии 2025, Поля записи: обязательные и необязательные, Структура
 
 ## Knowledge Gaps
-- **196 isolated node(s):** `BonusGoalParams`, `Window`, `YmFunction`, `ClipboardBindingValue`, `ClipboardOptions` (+191 more)
+- **196 isolated node(s):** `name`, `version`, `private`, `type`, `dev` (+191 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **1 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -162,7 +163,7 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.006) - this node is a cross-community bridge._
 - **Are the 2 inferred relationships involving `normalizeString()` (e.g. with `isBonusPromotion()` and `parseFilters()`) actually correct?**
   _`normalizeString()` has 2 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `BonusGoalParams`, `Window`, `YmFunction` to the rest of the system?**
+- **What connects `name`, `version`, `private` to the rest of the system?**
   _196 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `compilerOptions` be split into smaller, more focused modules?**
   _Cohesion score 0.08333333333333333 - nodes in this community are weakly interconnected._

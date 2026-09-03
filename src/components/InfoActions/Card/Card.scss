@@ -9,7 +9,7 @@
     flex-direction: column;
     align-items: start;
     height: 100%;
-    background: #FFF;
+    background: var(--color_Base_Light);
   }
 
   &__visual {
@@ -50,11 +50,11 @@
   }
 
   &__title {
-    margin-bottom: 8px !important;
+    margin-bottom: 8px;
   }
 
   &__description {
-    margin-bottom: 16px !important;
+    margin-bottom: 16px;
     font-weight: 400;
   }
 
@@ -72,9 +72,9 @@
   }
 
 
-  &__link {
+  & &__link {
     width: fit-content;
-    margin-top: 0 !important;
+    margin-top: 0;
     white-space: nowrap;
   }
 }
@@ -85,7 +85,7 @@
    .cards-container:has(.sunmar). Иконка бренда теперь не прячется через CSS,
    а рендерится одна — см. Card.vue. */
 :global([data-brand='sunmar']) .promo-card {
-  background: #f5f5f8;
+  background: var(--color_Sunmar_Surface);
   border-radius: 16px;
 
   .promo-card__visual {
@@ -95,12 +95,12 @@
   .promo-card__content {
     margin-top: -15px;
     padding: 24px;
-    background: #f5f5f8;
+    background: var(--color_Sunmar_Surface);
     border-radius: 20px;
   }
 
   .promo-card__title {
-    margin-bottom: 24px !important;
+    margin-bottom: 24px;
     font-size: 28px;
     text-align: center;
   }
@@ -120,7 +120,7 @@
   .promo-card__time {
     justify-content: center;
     order: 3;
-    margin-bottom: 20px !important;
+    margin-bottom: 20px;
   }
 
   .promo-card__link {
@@ -133,7 +133,7 @@
   }
 
   .time-text {
-    color: #2e3465;
+    color: var(--color_Sunmar_Primary);
   }
 }
 
@@ -146,7 +146,7 @@
   color: rgb(0 0 0 / 85%);
   font-size: 12px;
   line-height: 20px;
-  background: #fff;
+  background: var(--color_Base_Light);
   border: none;
   border-radius: var(--radius-border_Radius_XXXL, 48px);
   cursor: pointer;
@@ -162,8 +162,8 @@
   width: max-content;
   max-width: min(280px, calc(100% - 16px));
   padding: 12px;
-  color: #535353;
-  background: #fff;
+  color: var(--color_Header_Icon);
+  background: var(--color_Base_Light);
   border-radius: 8px;
   box-shadow: 0 4px 16px rgb(0 0 0 / 20%);
 
@@ -173,7 +173,7 @@
     right: 24px;
     width: 10px;
     height: 10px;
-    background: #fff;
+    background: var(--color_Base_Light);
     box-shadow: -2px -2px 4px rgb(0 0 0 / 8%);
     transform: rotate(45deg);
     content: '';
@@ -223,7 +223,7 @@
 
 .erid {
   min-width: 0;
-  color: #535353;
+  color: var(--color_Header_Icon);
   font-size: 12px;
   overflow-wrap: anywhere;
 }
@@ -247,7 +247,7 @@
   width: 32px;
   height: 32px;
   padding: 0;
-  background: #fff;
+  background: var(--color_Base_Light);
   border: none;
   border-radius: 6px;
   cursor: pointer;
