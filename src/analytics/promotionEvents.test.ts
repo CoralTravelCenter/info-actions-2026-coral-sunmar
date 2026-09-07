@@ -7,7 +7,7 @@ describe("dispatchPromotionClick", () => {
     vi.unstubAllGlobals();
   });
 
-  it("передаёт во внешнее событие только name", () => {
+  it("передаёт нейтральные данные акции во внешнее событие", () => {
     const dispatchEvent = vi.fn();
     class CustomEventStub<T> {
       constructor(
@@ -23,12 +23,20 @@ describe("dispatchPromotionClick", () => {
     vi.stubGlobal("document", {dispatchEvent});
     vi.stubGlobal("CustomEvent", CustomEventStub);
 
-    dispatchPromotionClick({name: "Азиатские недели"});
+    dispatchPromotionClick({
+      name: "Азиатские недели",
+      url: "/offers/asian-weeks/",
+    });
 
     expect(dispatchEvent).toHaveBeenCalledOnce();
-    const event = dispatchEvent.mock.calls[0]?.[0] as CustomEventStub<{name: string}>;
+    const event = dispatchEvent.mock.calls[0]?.[0] as CustomEventStub<{
+      name: string;
+      url: string;
+    }>;
     expect(event.type).toBe(PROMOTION_CLICK_EVENT);
-    expect(event.detail).toEqual({name: "Азиатские недели"});
-    expect(Object.keys(event.detail)).toEqual(["name"]);
+    expect(event.detail).toEqual({
+      name: "Азиатские недели",
+      url: "/offers/asian-weeks/",
+    });
   });
 });

@@ -3,38 +3,35 @@ import type {Directive} from "vue";
 import {reachBonusGoal} from "../config/brand";
 
 interface BonusBindingValue {
-  id?: string;
   name?: string;
   enabled?: boolean;
 }
 
 interface NormalizedBonusBinding {
-  id: string;
   name: string;
   enabled: boolean;
 }
 
-const sentPromotionIds = new Set<string>();
+const sentPromotionNames = new Set<string>();
 const stopByElement = new WeakMap<HTMLElement, () => void>();
 const INTERSECTION_THRESHOLD = 0.2;
 
 function normalize(value: BonusBindingValue | null | undefined): NormalizedBonusBinding {
   const binding = value ?? {};
   return {
-    id: typeof binding.id === "string" ? binding.id.trim() : "",
     name: typeof binding.name === "string" ? binding.name.trim() : "",
     enabled: binding.enabled === true,
   };
 }
 
 function observe(el: HTMLElement, promotion: NormalizedBonusBinding): void {
-  if (!promotion.enabled || !promotion.id || !promotion.name) return;
-  if (sentPromotionIds.has(promotion.id)) return;
+  if (!promotion.enabled || !promotion.name) return;
+  if (sentPromotionNames.has(promotion.name)) return;
 
   const {stop} = useIntersectionObserver(
     el,
     ([entry]) => {
-      if (!entry?.isIntersecting || sentPromotionIds.has(promotion.id)) return;
+      if (!entry?.isIntersecting || sentPromotionNames.has(promotion.name)) return;
 
       const accepted = reachBonusGoal({
         [location.pathname]: {
@@ -44,7 +41,7 @@ function observe(el: HTMLElement, promotion: NormalizedBonusBinding): void {
 
       if (!accepted) return;
 
-      sentPromotionIds.add(promotion.id);
+      sentPromotionNames.add(promotion.name);
       stop();
       stopByElement.delete(el);
     },
@@ -63,7 +60,6 @@ const ymBonus: Directive<HTMLElement, BonusBindingValue> = {
     const next = normalize(binding.value);
     const previous = normalize(binding.oldValue);
     if (
-      next.id === previous.id &&
       next.name === previous.name &&
       next.enabled === previous.enabled
     ) {

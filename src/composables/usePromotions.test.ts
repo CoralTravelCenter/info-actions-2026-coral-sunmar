@@ -10,14 +10,12 @@ describe("usePromotions", () => {
     const state = scope.run(() =>
       usePromotions([
         {
-          id: "timed",
           name: "Ограниченная акция",
           visual: "timed.webp",
           filter: "Скоро закончится",
           promo_end: "2026-09-01 11:01",
         },
         {
-          id: "stable",
           name: "Постоянная акция",
           visual: "stable.webp",
           filter: "Постоянные",
@@ -36,7 +34,9 @@ describe("usePromotions", () => {
 
     expect(state.filters.value).not.toContain("Скоро закончится");
     expect(state.currentFilter.value).toBe("Все акции");
-    expect(state.filteredPromotions.value.map(promotion => promotion.id)).toEqual(["stable"]);
+    expect(state.filteredPromotions.value.map(promotion => promotion.nameText)).toEqual([
+      "Постоянная акция",
+    ]);
 
     scope.stop();
   });
@@ -44,19 +44,16 @@ describe("usePromotions", () => {
   it("добавляет сроковой фильтр и сортирует его по ближайшему завершению", () => {
     const state = usePromotions([
       {
-        id: "later",
         name: "Поздняя",
         visual: "later.webp",
         promo_end: "2026-09-25 23:59",
       },
       {
-        id: "sooner",
         name: "Ближайшая",
         visual: "sooner.webp",
         promo_end: "2026-09-10 23:59",
       },
       {
-        id: "long",
         name: "Долгая",
         visual: "long.webp",
         promo_end: "2026-12-31 23:59",
@@ -65,9 +62,9 @@ describe("usePromotions", () => {
 
     expect(state.filters.value).toContain(ENDING_SOON_FILTER);
     state.currentFilter.value = ENDING_SOON_FILTER;
-    expect(state.filteredPromotions.value.map(promotion => promotion.id)).toEqual([
-      "sooner",
-      "later",
+    expect(state.filteredPromotions.value.map(promotion => promotion.nameText)).toEqual([
+      "Ближайшая",
+      "Поздняя",
     ]);
   });
 });

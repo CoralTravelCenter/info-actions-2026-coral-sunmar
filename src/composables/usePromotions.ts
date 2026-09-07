@@ -62,6 +62,7 @@ export function usePromotions(
     currentFilter,
     filteredPromotions,
     filters,
+    freshPromotions,
     hasPromotions,
     invalidPromotions: normalized.invalid,
   };

@@ -14,7 +14,6 @@ describe("promoSchema", () => {
 
     const {promotions, invalid} = normalizePromotions([
       {
-        id: "promo-1",
         name: "Акция",
         visual: "image.webp",
         filter: "По направлениям, CoralBonus, CoralBonus",
@@ -24,24 +23,23 @@ describe("promoSchema", () => {
 
     expect(invalid).toEqual([]);
     expect(promotions[0]).toMatchObject({
-      id: "promo-1",
       filters: ["По направлениям", "CoralBonus"],
       legal: "ООО «Компания»",
     });
   });
 
-  it("отбрасывает записи без обязательных полей и повторяющиеся id", () => {
+  it("отбрасывает записи без обязательных полей и повторяющиеся названия", () => {
     vi.spyOn(console, "warn").mockImplementation(() => undefined);
 
     const result = normalizePromotions([
-      {id: "same", name: "Первая", visual: "first.webp"},
-      {id: "same", name: "Вторая", visual: "second.webp"},
+      {name: "Одинаковая<br>акция", visual: "first.webp"},
+      {name: "Одинаковая акция", visual: "second.webp"},
       {name: "Без изображения"},
     ]);
 
     expect(result.promotions).toHaveLength(1);
     expect(result.invalid).toEqual([
-      {name: "Вторая", missing: []},
+      {name: "Одинаковая акция", missing: []},
       {name: "Без изображения", missing: ["visual"]},
     ]);
   });
@@ -56,16 +54,5 @@ describe("promoSchema", () => {
       {name: "запись #3", missing: ["name", "visual"]},
       {name: "запись #4", missing: ["name", "visual"]},
     ]);
-  });
-
-  it("создаёт детерминированный fallback id", () => {
-    vi.spyOn(console, "warn").mockImplementation(() => undefined);
-    const config = [{name: "Акция", visual: "image.webp", url: "/offer"}];
-
-    const firstId = normalizePromotions(config).promotions[0]?.id;
-    const secondId = normalizePromotions(config).promotions[0]?.id;
-
-    expect(firstId).toMatch(/^promotion-/);
-    expect(secondId).toBe(firstId);
   });
 });

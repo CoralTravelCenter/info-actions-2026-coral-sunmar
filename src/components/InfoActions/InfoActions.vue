@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import {computed, ref} from "vue";
+import {computed, ref, watchEffect} from "vue";
 import {useMediaQuery} from "@vueuse/core";
 
 import {usePromotionContext} from "../../composables/usePromotionContext";
 import {usePromotionPagination} from "../../composables/usePromotionPagination";
 import {usePromotions} from "../../composables/usePromotions";
 import {getPromotions} from "../../data/promotions";
+import {syncPromotionCatalog} from "../../seo/promotionCatalog";
 import type {Promotion} from "../../types/promotion";
 import {collectConfigWarnings, isWarningsVisible} from "../../data/promotionDiagnostics";
 import Card from "./Card/Card.vue";
@@ -16,6 +17,7 @@ const {
 	currentFilter,
 	filteredPromotions,
 	filters,
+	freshPromotions,
 	hasPromotions,
 	invalidPromotions,
 } = usePromotions(rawPromotions);
@@ -29,6 +31,7 @@ const {
 	visibleItems: visiblePromotions,
 } = usePromotionPagination<Promotion>(filteredPromotions, pageSize, currentFilter);
 const {brand, getErid, publishPromotionClick} = usePromotionContext();
+watchEffect(() => syncPromotionCatalog(freshPromotions.value, brand));
 const priorityImageCount = computed(() => {
 	if (isDesktop.value) return brand === "sunmar" ? 3 : 4;
 	return isTablet.value ? 2 : 1;
@@ -76,9 +79,8 @@ const areWarningsVisible = ref(configWarnings.length > 0);
 	>
 		<Card
 				v-for="(promotion, index) in visiblePromotions"
-				:key="promotion.id"
+				:key="promotion.nameText"
 				v-bonus="{
-        id: promotion.id,
         name: promotion.nameText,
         enabled: promotion.analytics.bonusImpression,
       }"

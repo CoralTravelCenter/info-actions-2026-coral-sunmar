@@ -34,10 +34,10 @@ describe("v-ym-bonus", () => {
     if (!mounted) throw new Error("У директивы отсутствует mounted-хук");
 
     const firstBinding = {
-      value: {id: "first", name: "Первая акция", enabled: true},
+      value: {name: "Первая акция", enabled: true},
     };
     const secondBinding = {
-      value: {id: "second", name: "Вторая акция", enabled: true},
+      value: {name: "Вторая акция", enabled: true},
     };
 
     mounted({} as HTMLElement, firstBinding as never, {} as never, null);

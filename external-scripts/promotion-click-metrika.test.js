@@ -55,4 +55,16 @@ describe.each(cases)("$file", ({file, counterId, promotions}) => {
 
     expect(ym).not.toHaveBeenCalled();
   });
+
+  it("игнорирует событие без корректного detail", () => {
+    expect(() => clickListener({})).not.toThrow();
+    expect(() => clickListener({detail: {name: null}})).not.toThrow();
+    expect(ym).not.toHaveBeenCalled();
+  });
+
+  it("не падает, если Метрика ещё не готова", () => {
+    window.ym = undefined;
+
+    expect(() => clickListener({detail: {name: promotions[0][0]}})).not.toThrow();
+  });
 });

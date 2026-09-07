@@ -1,17 +1,22 @@
 import {createApp} from "vue";
-
-// DEV: перед production-сборкой закомментировать этот импорт.
-// На боевом сайте window._promotion_settings заполняет внешний скрипт.
-import "../data/promotion-settings.js";
+// import "../data/promotion-settings.js";
 
 import InfoActions from "../components/InfoActions/InfoActions.vue";
 import {BRAND} from "../config/brand";
 import ymBonus from "../directives/ymbonus.directive";
 import Clipboard from "../directives/clipboard.directive";
-import {hostReactAppReady} from "./hostReactAppReady.js";
+import {waitForAppPrerequisites} from "./waitForAppPrerequisites";
 
 export default async function infoActions() {
-    await hostReactAppReady()
+    const readiness = await waitForAppPrerequisites();
+    if (readiness.timedOut) {
+        const missing = [
+            !readiness.hostReady && "React host",
+            !readiness.configReady && "window._promotion_settings",
+        ].filter(Boolean).join(" и ");
+        console.warn(`[info-actions] Ожидание ${missing} превысило 1 секунду.`);
+    }
+
     const target = document.querySelector("#info-actions");
     if (!target) return;
 

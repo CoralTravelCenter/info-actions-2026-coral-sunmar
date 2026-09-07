@@ -7,6 +7,7 @@ import {
   useMediaQuery,
   useTimeoutFn,
 } from "@vueuse/core";
+import {formatPromotionEndText} from "../../../data/promotionDates";
 import type {Promotion} from "../../../types/promotion";
 
 const props = withDefaults(defineProps<{
@@ -29,6 +30,7 @@ const eridDisclosureRef = ref<HTMLElement | null>(null);
 const canHover = useMediaQuery("(hover: hover) and (pointer: fine)");
 const eridPopoverId = useId();
 const endDate = computed(() => props.promotion.promoEnd.slice(0, 10) || null);
+const endText = computed(() => formatPromotionEndText(props.promotion.promoEnd));
 const legalDetails = computed(() => {
   const match = props.promotion.legal.match(/^(.*?)(?:\s+(ИНН\s+\d+))$/i);
   return {
@@ -172,7 +174,7 @@ useEventListener(window, "scroll", () => {
         <p class="promo-card__description" v-html="promotion.descriptionHtml"></p>
 
         <div class="promo-card__footer">
-          <p v-if="promotion.promoEndText" class="promo-card__time">
+          <p v-if="endText" class="promo-card__time">
             <span class="icon" aria-hidden="true">
               <svg
                 v-if="brand === 'coral'"
@@ -212,9 +214,9 @@ useEventListener(window, "scroll", () => {
               </svg>
             </span>
             <time v-if="endDate" class="time-text" :datetime="endDate">
-              {{ promotion.promoEndText }}
+              {{ endText }}
             </time>
-            <span v-else class="time-text">{{ promotion.promoEndText }}</span>
+            <span v-else class="time-text">{{ endText }}</span>
           </p>
 
           <a

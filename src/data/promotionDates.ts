@@ -11,12 +11,20 @@ dayjs.extend(timezone);
 
 const TZ = "Europe/Moscow";
 const FORMAT = "YYYY-MM-DD HH:mm";
+const DISPLAY_FORMAT = "DD.MM.YYYY";
 const ENDING_SOON_DAYS = 30;
 
 function parseMsk(value: string) {
   const parsed = dayjs(value, FORMAT, true);
   if (!parsed.isValid()) return parsed;
   return dayjs.tz(value, FORMAT, TZ);
+}
+
+export function formatPromotionEndText(promoEnd: string): string {
+  if (!promoEnd) return "Бессрочно";
+
+  const end = parseMsk(promoEnd);
+  return end.isValid() ? `до ${end.format(DISPLAY_FORMAT)}` : "";
 }
 
 export function filterFreshOffers(

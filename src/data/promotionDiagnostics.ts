@@ -128,7 +128,7 @@ export function collectConfigWarnings(
   const messages = invalid.map(({name, missing}) =>
     missing.length
       ? `${name} — не отрисована, нет полей: ${missing.join(", ")}`
-      : `${name} — не отрисована из-за дублирующегося id`,
+      : `${name} — не отрисована из-за дублирующегося названия`,
   );
 
   if (messages.length) {

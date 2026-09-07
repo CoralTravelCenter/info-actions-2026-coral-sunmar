@@ -1,6 +1,20 @@
 import {describe, expect, it} from "vitest";
 
-import {filterFreshOffers, isEndingSoon} from "./promotionDates";
+import {
+  filterFreshOffers,
+  formatPromotionEndText,
+  isEndingSoon,
+} from "./promotionDates";
+
+describe("formatPromotionEndText", () => {
+  it("форматирует техническую дату для карточки", () => {
+    expect(formatPromotionEndText("2026-10-31 23:59")).toBe("до 31.10.2026");
+  });
+
+  it("считает акцию без даты бессрочной", () => {
+    expect(formatPromotionEndText("")).toBe("Бессрочно");
+  });
+});
 
 describe("filterFreshOffers", () => {
   it("считает московские границы включительно", () => {

@@ -4,7 +4,6 @@ export interface PromotionAnalyticsConfig {
 
 /** Сырой объект акции из внешнего конфига. */
 export interface PromotionConfig {
-  id?: string;
   name: string;
   visual: string;
   /** Историческое поле; поддерживается до миграции внешнего конфига. */
@@ -15,7 +14,6 @@ export interface PromotionConfig {
   url?: string;
   promo_start?: string;
   promo_end?: string;
-  promo_end_text?: string;
   erid?: string;
   app_erid?: string;
   legal?: string;
@@ -26,11 +24,11 @@ export interface PromotionConfig {
 
 /** Полностью нормализованная внутренняя модель. */
 export interface Promotion {
-  id: string;
   name: string;
   nameText: string;
   nameHtml: string;
   descriptionHtml: string;
+  descriptionText: string;
   visual: string;
   url: string;
   filters: string[];
@@ -39,7 +37,6 @@ export interface Promotion {
   appErid: string;
   promoStart: string;
   promoEnd: string;
-  promoEndText: string;
   analytics: {
     bonusImpression: boolean;
   };

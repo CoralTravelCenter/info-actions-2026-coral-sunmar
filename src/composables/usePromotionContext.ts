@@ -20,8 +20,13 @@ export function usePromotionContext() {
     return resolveErid(promotion, isApplication.value);
   }
 
-  function publishPromotionClick(promotion: Pick<Promotion, "nameText">): void {
-    dispatchPromotionClick({name: promotion.nameText});
+  function publishPromotionClick(
+    promotion: Pick<Promotion, "nameText" | "url">,
+  ): void {
+    dispatchPromotionClick({
+      name: promotion.nameText,
+      url: promotion.url,
+    });
   }
 
   return {

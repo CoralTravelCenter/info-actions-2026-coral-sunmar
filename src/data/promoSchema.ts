@@ -51,24 +51,6 @@ function parseFilters(promo: PromotionConfigInput): string[] {
   return [...new Set(values.map(normalizeString).filter(Boolean))];
 }
 
-function hashString(value: string): string {
-  let hash = 2166136261;
-  for (let index = 0; index < value.length; index += 1) {
-    hash ^= value.charCodeAt(index);
-    hash = Math.imul(hash, 16777619);
-  }
-  return (hash >>> 0).toString(36);
-}
-
-function createPromotionId(promo: PromotionConfigInput): string {
-  const explicitId = normalizeString(promo.id);
-  if (explicitId) return explicitId;
-
-  return `promotion-${hashString(
-    [promo.name, promo.url, promo.visual].map(normalizeString).join("|"),
-  )}`;
-}
-
 function isBonusPromotion(promo: PromotionConfigInput, filters: string[]): boolean {
   if (typeof promo.analytics?.bonusImpression === "boolean") {
     return promo.analytics.bonusImpression;
@@ -90,11 +72,11 @@ function normalizePromotion(
   const name = normalizeString(promo.name);
 
   return Object.freeze({
-    id: createPromotionId(promo),
     name,
     nameText: htmlToText(name),
     nameHtml: sanitizePromotionHtml(name),
     descriptionHtml: sanitizePromotionHtml(promo.description),
+    descriptionText: htmlToText(promo.description),
     visual: normalizeString(promo.visual),
     url: normalizeString(promo.url),
     filters,
@@ -103,7 +85,6 @@ function normalizePromotion(
     appErid: normalizeString(promo.app_erid),
     promoStart: normalizeString(promo.promo_start),
     promoEnd: normalizeString(promo.promo_end),
-    promoEndText: normalizeString(promo.promo_end_text),
     analytics: Object.freeze({
       bonusImpression: isBonusPromotion(promo, filters),
     }),
@@ -113,8 +94,7 @@ function normalizePromotion(
 export function normalizePromotions(list: readonly unknown[]): NormalizedPromotions {
   const promotions: Promotion[] = [];
   const invalid: InvalidPromotion[] = [];
-  const ids = new Set<string>();
-  let fallbackIdCount = 0;
+  const names = new Set<string>();
 
   list.forEach((value, index) => {
     if (!isPromotionConfigInput(value)) {
@@ -135,25 +115,18 @@ export function normalizePromotions(list: readonly unknown[]): NormalizedPromoti
       return;
     }
 
-    if (!normalizeString(promo.id)) fallbackIdCount += 1;
-
     const promotion = normalizePromotion(promo, parseFilters(promo));
-    if (ids.has(promotion.id)) {
+    if (names.has(promotion.nameText)) {
       invalid.push({name: promotion.name, missing: []});
-      console.warn(`[info-actions] Дублирующийся id ${promotion.id}; запись пропущена.`);
+      console.warn(
+        `[info-actions] Дублирующееся название ${promotion.nameText}; запись пропущена.`,
+      );
       return;
     }
 
-    ids.add(promotion.id);
+    names.add(promotion.nameText);
     promotions.push(promotion);
   });
-
-  if (fallbackIdCount > 0) {
-    console.warn(
-      `[info-actions] У ${fallbackIdCount} записей отсутствует id; ` +
-        "использованы детерминированные fallback ID.",
-    );
-  }
 
   return {promotions, invalid};
 }

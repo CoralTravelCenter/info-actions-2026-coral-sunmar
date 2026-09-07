@@ -1,5 +1,7 @@
 document.addEventListener("promotion-card:click", event => {
-  const {name} = event.detail;
+  const name = event.detail?.name;
+  if (typeof name !== "string") return;
+
   let entryPoint;
 
   switch (name) {
@@ -15,6 +17,8 @@ document.addEventListener("promotion-card:click", event => {
     default:
       return;
   }
+
+  if (typeof window.ym !== "function") return;
 
   window.ym(96674199, "reachGoal", "entry-point", {
     name_stock: {
