@@ -116,7 +116,7 @@ useEventListener(window, "scroll", () => {
 					@mouseenter="openOnHover"
 					@mouseleave="closeOnHover"
         >
-          <div class="content">
+          <div class="erid-popover__content">
             <div class="legal">
               <span class="legal__name">{{ legalDetails.name }}</span>
               <span v-if="legalDetails.taxId" class="legal__tax-id">

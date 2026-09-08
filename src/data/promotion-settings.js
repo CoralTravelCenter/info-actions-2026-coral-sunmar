@@ -9,10 +9,8 @@
  * @property {string} [description] Краткое описание акции. Для переноса строки допускается тег `<br>`.
  * @property {string} [legal] Наименование рекламодателя; ИНН можно указать в конце строки.
  * @property {string} [erid] Идентификатор рекламного материала для маркировки рекламы.
- * @property {string} [app_erid] Отдельный ERID для мобильного приложения, если он отличается от `erid`.
  * @property {string} [promo_start] Дата начала показа в формате `YYYY-MM-DD HH:mm`.
  * @property {string} [promo_end] Дата окончания показа в формате `YYYY-MM-DD HH:mm`.
- * @property {{bonusImpression?: boolean}} [analytics] Явные настройки аналитики акции.
  */
 
 /** @type {PromotionConfig[]} */
@@ -148,7 +146,7 @@ window._promotion_settings = [
         "promo_end": "2026-12-30 23:59",
     },
     {
-        "filters": ["По направлениям","Акции отелей"],
+        "filters": ["По направлениям", "Акции отелей"],
         "name": "Отели Турции и Египта с бесплатным проживанием для двоих детей",
         "visual": "https://b2ccdn.coral.ru/content/img/actions/action2+2.png",
         "url": "/poleznaya-informatsiya/offers/hot-offers/aktsiya-deti-otdyhayut-besplatno/?banner_on_site=offers-deti-otdyhayut-besplatno",

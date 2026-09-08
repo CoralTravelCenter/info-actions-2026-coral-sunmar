@@ -2,6 +2,7 @@
 import {nextTick, ref, watch} from "vue";
 import {useMediaQuery} from "@vueuse/core";
 import {useFixedNavigation} from "../../../composables/useFixedNavigation";
+import {BRAND} from "../../../config/brand";
 
 defineProps<{
 	filters: readonly string[];
@@ -17,7 +18,7 @@ const {anchorStyle, isFixed, isVisible, navigationStyle} = useFixedNavigation(
 	{
 		desktopQuery: "(min-width: 992px)",
 		tabletQuery: "(min-width: 768px)",
-		mobileTop: 57,
+		mobileTop: BRAND === "sunmar" ? 65 : 57,
 		tabletTop: 41,
 		desktopTop: 0,
 		hideStep: 48,

@@ -2,20 +2,33 @@
   box-sizing: border-box;
 }
 
+body:has(#info-actions[data-brand='sunmar']) section.coral .info-actions-title {
+  color: #061A3E;
+}
+
 section.coral {
   padding-inline: 16px;
-  padding-block: 40px;
+  padding-block: 20px;
 
   @media (min-width: 992px) {
     padding-inline: 0;
+    padding-block: 40px;
   }
 
   h1, h2, h3, h4, h5 {
     margin: 0;
   }
 
-  h1 {
-    font-size: 36px;
+  h1.info-actions-title {
+    // Стили CMS задают размер H1 через !important.
+    font-size: clamp(28px, 4vw, 32px) !important;
+  }
+
+  @media (width < 768px) {
+    h1.info-actions-title {
+      // Стили CMS задают интерлиньяж H1 через !important.
+      line-height: 1.2 !important;
+    }
   }
 
   h3 {

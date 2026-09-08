@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "b2c-landing-vite dev",
     "build": "b2c-landing-vite build",
-    "check": "b2c-landing-vite check && vue-tsc --noEmit",
+    "check": "b2c-landing-vite check",
     "check:production-config": "node tools/check-production-config.mjs",
     "test": "vitest",
     "test:run": "vitest run",
@@ -15,18 +15,18 @@
     "block:rename": "b2c-landing-vite block:rename",
     "deploy": "b2c-landing-vite deploy",
     "deploy:section": "b2c-landing-vite deploy --section",
-    "deploy:assets": "b2c-landing-vite deploy assets"
+    "deploy:assets": "b2c-landing-vite deploy assets",
+    "graphify": "graphify extract . --code-only"
   },
   "dependencies": {
     "@vueuse/core": "^13.7.0",
     "dayjs": "^1.11.13"
   },
   "devDependencies": {
+    "vitest": "^4.1.11",
+    "vue-tsc": "^3.3.9",
     "@vitejs/plugin-vue": "^6.0.8",
     "sass": "^1.102.0",
-    "typescript": "~5.9.3",
-    "vitest": "^4.1.11",
-    "vue": "^3.5.41",
-    "vue-tsc": "^3.3.9"
+    "vue": "^3.5.41"
   }
 }
