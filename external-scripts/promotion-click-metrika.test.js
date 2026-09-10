@@ -4,24 +4,24 @@ const cases = [
   {
     file: "./promotion-click-metrika-coral.js",
     counterId: 96674199,
+    goalName: "entry-point",
     promotions: [
-      ["Азиатские недели с Coral Travel", "asian_weeks"],
-      ["Зажгите новогоднее настроение", "ny_normal_27"],
-      ["Выгодные путешествия летом!", "june_26"],
+      ["asian-weeks-2026", "asian_weeks"],
+      ["new-year-program-2026", "ny_normal_27"],
     ],
   },
   {
     file: "./promotion-click-metrika-sunmar.js",
     counterId: 215233,
+    goalName: "entry_point",
     promotions: [
-      ["На всё готовое — в Новый год", "NY_26_27"],
-      ["Ловите двойную волну выгоды!", "hotels_of_the_week"],
-      ["Хотим на море!", "june_26"],
+      ["family-early-booking-2027", "eb_winter_27"],
+      ["new-year-ready-2026", "NY_26_27"],
     ],
   },
 ];
 
-describe.each(cases)("$file", ({file, counterId, promotions}) => {
+describe.each(cases)("$file", ({file, counterId, goalName, promotions}) => {
   let clickListener;
   let ym;
 
@@ -40,10 +40,10 @@ describe.each(cases)("$file", ({file, counterId, promotions}) => {
     await import(file);
   });
 
-  it.each(promotions)("передаёт код для %s", (name, entryPoint) => {
-    clickListener({detail: {name}});
+  it.each(promotions)("передаёт код для %s", (id, entryPoint) => {
+    clickListener({detail: {id}});
 
-    expect(ym).toHaveBeenCalledWith(counterId, "reachGoal", "entry-point", {
+    expect(ym).toHaveBeenCalledWith(counterId, "reachGoal", goalName, {
       name_stock: {
         [entryPoint]: {name_point: "promo_page"},
       },
@@ -51,20 +51,20 @@ describe.each(cases)("$file", ({file, counterId, promotions}) => {
   });
 
   it("не вызывает Метрику для неизвестной акции", () => {
-    clickListener({detail: {name: "Другая акция"}});
+    clickListener({detail: {id: "another-promotion"}});
 
     expect(ym).not.toHaveBeenCalled();
   });
 
   it("игнорирует событие без корректного detail", () => {
     expect(() => clickListener({})).not.toThrow();
-    expect(() => clickListener({detail: {name: null}})).not.toThrow();
+    expect(() => clickListener({detail: {id: null}})).not.toThrow();
     expect(ym).not.toHaveBeenCalled();
   });
 
   it("не падает, если Метрика ещё не готова", () => {
     window.ym = undefined;
 
-    expect(() => clickListener({detail: {name: promotions[0][0]}})).not.toThrow();
+    expect(() => clickListener({detail: {id: promotions[0][0]}})).not.toThrow();
   });
 });

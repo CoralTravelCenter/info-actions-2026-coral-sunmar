@@ -207,25 +207,25 @@
     ],
     "7": [
       "analysis_2026",
-      "analysis_2026_1_1_\u0447\u0442\u043e_\u044d\u0442\u043e",
-      "analysis_2026_1_2_\u0447\u0442\u043e_\u0443\u0436\u0435_\u0445\u043e\u0440\u043e\u0448\u043e_\u0441\u0434\u0435\u043b\u0430\u043d\u043e_\u043f\u0440\u0438_\u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0438",
-      "analysis_2026_1_3_\u043f\u0440\u043e\u0431\u043b\u0435\u043c\u044b_\u043d\u0430\u0439\u0434\u0435\u043d\u043d\u044b\u0435_\u0432_\u0442\u0435\u043a\u0443\u0449\u0435\u043c_\u043a\u043e\u0434\u0435",
-      "analysis_2026_1_\u0430\u043d\u0430\u043b\u0438\u0437_\u043f\u0440\u043e\u0435\u043a\u0442\u0430",
-      "analysis_2026_2_1_\u043e\u0442\u0434\u0435\u043b\u044c\u043d\u044b\u0439_\u0442\u0440\u0435\u043a_\u043f\u0440\u043e\u0438\u0437\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u044c_vue_\u0438_\u0441\u0435\u043c\u0430\u043d\u0442\u0438\u043a\u0430_\u0432\u043c\u0435\u0441\u0442\u043e_ssr",
-      "analysis_2026_2_\u043f\u043b\u0430\u043d_\u043f\u043e_\u043e\u043f\u0442\u0438\u043c\u0438\u0437\u0430\u0446\u0438\u0438_\u0438_\u0440\u0435\u0444\u0430\u043a\u0442\u043e\u0440\u0438\u043d\u0433\u0443",
-      "analysis_2026_3_0_\u043a\u043e\u043d\u0442\u0435\u043a\u0441\u0442_\u0434\u0430\u043d\u043d\u044b\u0435_\u0442\u043e\u0436\u0435_\u043f\u0440\u0438\u0445\u043e\u0434\u044f\u0442_\u0430\u0441\u0438\u043d\u0445\u0440\u043e\u043d\u043d\u043e",
-      "analysis_2026_3_1_\u0433\u043e\u043d\u043a\u0430_\u0441_\u0437\u0430\u0433\u0440\u0443\u0437\u043a\u043e\u0439_\u0441\u0447\u0451\u0442\u0447\u0438\u043a\u0430_\u0446\u0435\u043b\u0438_\u0442\u0435\u0440\u044f\u044e\u0442\u0441\u044f_\u043c\u043e\u043b\u0447\u0430_\u0433\u043b\u0430\u0432\u043d\u0430\u044f_\u043f\u0440\u0438\u0447\u0438\u043d\u0430",
-      "analysis_2026_3_2_\u043a\u043b\u0438\u043a_\u043d\u0435_\u0442\u0440\u0435\u043a\u0430\u0435\u0442\u0441\u044f_\u0443_18_\u0438\u0437_25_\u0430\u043a\u0446\u0438\u0439",
-      "analysis_2026_3_3_\u0446\u0435\u043b\u044c_\u043f\u043e_\u043a\u043b\u0438\u043a\u0443_\u043d\u0435_\u0443\u0441\u043f\u0435\u0432\u0430\u0435\u0442_\u0443\u0439\u0442\u0438_\u043f\u0440\u0438_\u043f\u0435\u0440\u0435\u0445\u043e\u0434\u0435",
-      "analysis_2026_3_4_\u0434\u0443\u0431\u043b\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435_\u0446\u0435\u043b\u0435\u0439_\u043f\u0440\u0438_\u043f\u0435\u0440\u0435\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u0438_\u0442\u0430\u0431\u043e\u0432_\u0434\u0430\u043d\u043d\u044b\u0435_\u0437\u0430\u0432\u044b\u0448\u0435\u043d\u044b",
-      "analysis_2026_3_5_\u043d\u0435\u0432\u0435\u0440\u043d\u044b\u0439_\u0431\u0440\u0435\u043d\u0434_\u0441\u0447\u0451\u0442\u0447\u0438\u043a_\u0438_\u0441\u0442\u0443\u0445\u0448\u0438\u0435_\u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u044b",
-      "analysis_2026_3_6_\u043f\u043e\u0440\u044f\u0434\u043e\u043a_\u0440\u0430\u0431\u043e\u0442_\u043f\u043e_\u043c\u0435\u0442\u0440\u0438\u043a\u0435",
-      "analysis_2026_3_\u043f\u0440\u043e\u0431\u043b\u0435\u043c\u0430_\u0441_\u044f\u043d\u0434\u0435\u043a\u0441_\u043c\u0435\u0442\u0440\u0438\u043a\u043e\u0439_\u043d\u0430_\u043f\u0440\u043e\u0434\u0430\u043a\u0448\u0435\u043d\u0435",
-      "analysis_2026_info_actions_2026_\u0430\u043d\u0430\u043b\u0438\u0437_\u043f\u043b\u0430\u043d_\u0440\u0435\u0444\u0430\u043a\u0442\u043e\u0440\u0438\u043d\u0433\u0430_\u0440\u0430\u0437\u0431\u043e\u0440_\u043f\u0440\u043e\u0431\u043b\u0435\u043c\u044b_\u0441_\u044f\u043d\u0434\u0435\u043a\u0441_\u043c\u0435\u0442\u0440\u0438\u043a\u043e\u0439",
-      "analysis_2026_p0_\u043a\u0440\u0438\u0442\u0438\u0447\u043d\u043e_\u0447\u0438\u043d\u0438\u0442\u044c_\u0441\u0440\u0430\u0437\u0443",
-      "analysis_2026_p1_\u0432\u0430\u0436\u043d\u043e\u0435_1_\u0434\u0435\u043d\u044c",
-      "analysis_2026_p2_\u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e_1_\u0434\u0435\u043d\u044c",
-      "analysis_2026_p3_\u043a\u0440\u0443\u043f\u043d\u043e\u0435_\u043f\u043e_\u043f\u043e\u0442\u0440\u0435\u0431\u043d\u043e\u0441\u0442\u0438"
+      "analysis_2026_1_1_что_это",
+      "analysis_2026_1_2_что_уже_хорошо_сделано_при_миграции",
+      "analysis_2026_1_3_проблемы_найденные_в_текущем_коде",
+      "analysis_2026_1_анализ_проекта",
+      "analysis_2026_2_1_отдельный_трек_производительность_vue_и_семантика_вместо_ssr",
+      "analysis_2026_2_план_по_оптимизации_и_рефакторингу",
+      "analysis_2026_3_0_контекст_данные_тоже_приходят_асинхронно",
+      "analysis_2026_3_1_гонка_с_загрузкой_счётчика_цели_теряются_молча_главная_причина",
+      "analysis_2026_3_2_клик_не_трекается_у_18_из_25_акций",
+      "analysis_2026_3_3_цель_по_клику_не_успевает_уйти_при_переходе",
+      "analysis_2026_3_4_дублирование_целей_при_переключении_табов_данные_завышены",
+      "analysis_2026_3_5_неверный_бренд_счётчик_и_стухшие_параметры",
+      "analysis_2026_3_6_порядок_работ_по_метрике",
+      "analysis_2026_3_проблема_с_яндекс_метрикой_на_продакшене",
+      "analysis_2026_info_actions_2026_анализ_план_рефакторинга_разбор_проблемы_с_яндекс_метрикой",
+      "analysis_2026_p0_критично_чинить_сразу",
+      "analysis_2026_p1_важное_1_день",
+      "analysis_2026_p2_качество_1_день",
+      "analysis_2026_p3_крупное_по_потребности"
     ],
     "8": [
       "src_components_infoactions_tabs_tabs",
@@ -264,19 +264,19 @@
     ],
     "10": [
       "agent_reports_summary",
-      "agent_reports_summary_\u0430\u0440\u0442\u0435\u0444\u0430\u043a\u0442\u044b_graphify",
-      "agent_reports_summary_\u0430\u0443\u0434\u0438\u0442_\u043f\u0440\u043e\u0435\u043a\u0442\u0430_\u0438_\u043f\u043b\u0430\u043d_\u0440\u0435\u0444\u0430\u043a\u0442\u043e\u0440\u0438\u043d\u0433\u0430",
-      "agent_reports_summary_\u0438\u0442\u043e\u0433_\u0432\u044b\u043f\u043e\u043b\u043d\u0435\u043d\u0438\u044f",
-      "agent_reports_summary_\u043f\u043b\u0430\u043d_\u0440\u0435\u0444\u0430\u043a\u0442\u043e\u0440\u0438\u043d\u0433\u0430_\u043f\u043e_\u0441\u043f\u0440\u0438\u043d\u0442\u0430\u043c",
-      "agent_reports_summary_\u0440\u0435\u043a\u043e\u043c\u0435\u043d\u0434\u0443\u0435\u043c\u044b\u0439_\u043f\u043e\u0440\u044f\u0434\u043e\u043a",
-      "agent_reports_summary_\u0441\u043f\u0440\u0438\u043d\u0442_0_\u0437\u0430\u0444\u0438\u043a\u0441\u0438\u0440\u043e\u0432\u0430\u0442\u044c_baseline",
-      "agent_reports_summary_\u0441\u043f\u0440\u0438\u043d\u0442_1_\u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u044b\u0439_production_\u043a\u043e\u043d\u0444\u0438\u0433_p0",
-      "agent_reports_summary_\u0441\u043f\u0440\u0438\u043d\u0442_2_\u043a\u043e\u043d\u0442\u0440\u0430\u043a\u0442_\u0432\u043d\u0435\u0448\u043d\u0438\u0445_\u0434\u0430\u043d\u043d\u044b\u0445_p1",
-      "agent_reports_summary_\u0441\u043f\u0440\u0438\u043d\u0442_3_\u043f\u0440\u043e\u0438\u0437\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u044c_\u043a\u0430\u0440\u0442\u043e\u0447\u0435\u043a_p1",
-      "agent_reports_summary_\u0441\u043f\u0440\u0438\u043d\u0442_4_\u0441\u0442\u0438\u043b\u0438_\u0438_\u0432\u0438\u0437\u0443\u0430\u043b\u044c\u043d\u0430\u044f_\u0443\u0441\u0442\u043e\u0439\u0447\u0438\u0432\u043e\u0441\u0442\u044c_p2",
-      "agent_reports_summary_\u0441\u043f\u0440\u0438\u043d\u0442_5_\u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u0446\u0438\u044f_\u0438_\u043a\u043e\u043d\u0442\u0440\u043e\u043b\u044c_\u0430\u0440\u0445\u0438\u0442\u0435\u043a\u0442\u0443\u0440\u044b_p2",
-      "agent_reports_summary_\u0441\u0442\u0430\u0442\u0443\u0441_\u0438\u0441\u0441\u043b\u0435\u0434\u043e\u0432\u0430\u043d\u0438\u044f",
-      "agent_reports_summary_\u0444\u0430\u043a\u0442\u0438\u0447\u0435\u0441\u043a\u043e\u0435_\u0441\u043e\u0441\u0442\u043e\u044f\u043d\u0438\u0435"
+      "agent_reports_summary_артефакты_graphify",
+      "agent_reports_summary_аудит_проекта_и_план_рефакторинга",
+      "agent_reports_summary_итог_выполнения",
+      "agent_reports_summary_план_рефакторинга_по_спринтам",
+      "agent_reports_summary_рекомендуемый_порядок",
+      "agent_reports_summary_спринт_0_зафиксировать_baseline",
+      "agent_reports_summary_спринт_1_безопасный_production_конфиг_p0",
+      "agent_reports_summary_спринт_2_контракт_внешних_данных_p1",
+      "agent_reports_summary_спринт_3_производительность_карточек_p1",
+      "agent_reports_summary_спринт_4_стили_и_визуальная_устойчивость_p2",
+      "agent_reports_summary_спринт_5_документация_и_контроль_архитектуры_p2",
+      "agent_reports_summary_статус_исследования",
+      "agent_reports_summary_фактическое_состояние"
     ],
     "11": [
       "agents_agent_defaults",
@@ -296,18 +296,18 @@
     ],
     "12": [
       "refactoring",
-      "refactoring_1_\u0442\u0435\u043a\u0443\u0449\u0430\u044f_\u0430\u0440\u0445\u0438\u0442\u0435\u043a\u0442\u0443\u0440\u0430",
-      "refactoring_2_\u0432\u044b\u043f\u043e\u043b\u043d\u0435\u043d\u043e",
-      "refactoring_3_\u0441\u043e\u0433\u043b\u0430\u0441\u043e\u0432\u0430\u043d\u043d\u044b\u0435_\u043e\u0433\u0440\u0430\u043d\u0438\u0447\u0435\u043d\u0438\u044f",
-      "refactoring_4_\u0447\u0442\u043e_\u043e\u0441\u0442\u0430\u043b\u043e\u0441\u044c",
-      "refactoring_5_\u043a\u043e\u043d\u0442\u0440\u043e\u043b\u044c\u043d\u044b\u0435_\u043a\u043e\u043c\u0430\u043d\u0434\u044b",
-      "refactoring_ui_\u0434\u043e\u0441\u0442\u0443\u043f\u043d\u043e\u0441\u0442\u044c_\u0438_\u043f\u0440\u043e\u0438\u0437\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u044c",
-      "refactoring_\u043a\u043e\u043d\u0442\u0440\u0430\u043a\u0442_\u0434\u0430\u043d\u043d\u044b\u0445",
-      "refactoring_\u043d\u0430\u0434\u0451\u0436\u043d\u043e\u0441\u0442\u044c_\u0438_\u0430\u043d\u0430\u043b\u0438\u0442\u0438\u043a\u0430",
-      "refactoring_\u043e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u043e_\u043f\u0435\u0440\u0435\u0434_production_\u0440\u0435\u043b\u0438\u0437\u043e\u043c",
-      "refactoring_\u043f\u0440\u043e\u0432\u0435\u0440\u043a\u0438",
-      "refactoring_\u0440\u0435\u0444\u0430\u043a\u0442\u043e\u0440\u0438\u043d\u0433_info_actions_2026",
-      "refactoring_\u0441\u043b\u0435\u0434\u0443\u044e\u0449\u0438\u0435_\u0441\u0430\u043c\u043e\u0441\u0442\u043e\u044f\u0442\u0435\u043b\u044c\u043d\u044b\u0435_\u0437\u0430\u0434\u0430\u0447\u0438"
+      "refactoring_1_текущая_архитектура",
+      "refactoring_2_выполнено",
+      "refactoring_3_согласованные_ограничения",
+      "refactoring_4_что_осталось",
+      "refactoring_5_контрольные_команды",
+      "refactoring_ui_доступность_и_производительность",
+      "refactoring_контракт_данных",
+      "refactoring_надёжность_и_аналитика",
+      "refactoring_обязательно_перед_production_релизом",
+      "refactoring_проверки",
+      "refactoring_рефакторинг_info_actions_2026",
+      "refactoring_следующие_самостоятельные_задачи"
     ],
     "13": [
       "package_devdependencies",
@@ -325,13 +325,13 @@
     "14": [
       "readme",
       "readme_info_actions_2026",
-      "readme_\u0430\u043d\u0430\u043b\u0438\u0442\u0438\u043a\u0430_\u043a\u043b\u0438\u043a\u043e\u0432",
-      "readme_\u0431\u043b\u043e\u043a\u0438_src_order_json",
-      "readme_\u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u0446\u0438\u044f",
-      "readme_\u0438\u0441\u0442\u043e\u0447\u043d\u0438\u043a_\u0434\u0430\u043d\u043d\u044b\u0445_\u043e\u0431_\u0430\u043a\u0446\u0438\u044f\u0445",
-      "readme_\u043e\u0442\u043b\u0438\u0447\u0438\u044f_\u043e\u0442_\u0432\u0435\u0440\u0441\u0438\u0438_2025",
-      "readme_\u043f\u043e\u043b\u044f_\u0437\u0430\u043f\u0438\u0441\u0438_\u043e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u044b\u0435_\u0438_\u043d\u0435\u043e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u044b\u0435",
-      "readme_\u0441\u0442\u0440\u0443\u043a\u0442\u0443\u0440\u0430"
+      "readme_аналитика_кликов",
+      "readme_блоки_src_order_json",
+      "readme_документация",
+      "readme_источник_данных_об_акциях",
+      "readme_отличия_от_версии_2025",
+      "readme_поля_записи_обязательные_и_необязательные",
+      "readme_структура"
     ],
     "15": [
       "src_directives_clipboard_directive",
@@ -346,23 +346,23 @@
     ],
     "16": [
       "agent_reports_development",
-      "agent_reports_development_\u0438\u0437\u043c\u0435\u043d\u0451\u043d\u043d\u044b\u0435_\u0444\u0430\u0439\u043b\u044b",
-      "agent_reports_development_\u043e\u0433\u0440\u0430\u043d\u0438\u0447\u0435\u043d\u0438\u044f",
-      "agent_reports_development_\u0440\u0435\u0430\u043b\u0438\u0437\u0430\u0446\u0438\u044f",
-      "agent_reports_development_\u0441\u043f\u0440\u0438\u043d\u0442_2_\u043a\u043e\u043d\u0442\u0440\u0430\u043a\u0442_\u0432\u043d\u0435\u0448\u043d\u0438\u0445_\u0434\u0430\u043d\u043d\u044b\u0445",
-      "agent_reports_development_\u0441\u043f\u0440\u0438\u043d\u0442_3_\u043f\u0440\u043e\u0438\u0437\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u044c_\u0438\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0439",
-      "agent_reports_development_\u0441\u043f\u0440\u0438\u043d\u0442_4_\u0441\u0442\u0438\u043b\u0438_\u0438_\u0432\u0438\u0437\u0443\u0430\u043b\u044c\u043d\u0430\u044f_\u0443\u0441\u0442\u043e\u0439\u0447\u0438\u0432\u043e\u0441\u0442\u044c",
-      "agent_reports_development_\u0441\u043f\u0440\u0438\u043d\u0442_5_\u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u0446\u0438\u044f_\u0438_\u0430\u0440\u0445\u0438\u0442\u0435\u043a\u0442\u0443\u0440\u043d\u044b\u0439_\u043a\u043e\u043d\u0442\u0440\u043e\u043b\u044c"
+      "agent_reports_development_изменённые_файлы",
+      "agent_reports_development_ограничения",
+      "agent_reports_development_реализация",
+      "agent_reports_development_спринт_2_контракт_внешних_данных",
+      "agent_reports_development_спринт_3_производительность_изображений",
+      "agent_reports_development_спринт_4_стили_и_визуальная_устойчивость",
+      "agent_reports_development_спринт_5_документация_и_архитектурный_контроль"
     ],
     "17": [
       "agent_reports_testing",
-      "agent_reports_testing_\u0432\u044b\u043f\u043e\u043b\u043d\u0435\u043d\u043e",
-      "agent_reports_testing_\u043d\u0435_\u043f\u0440\u043e\u0432\u0435\u0440\u0435\u043d\u043e",
-      "agent_reports_testing_\u043f\u043e\u043a\u0440\u044b\u0442\u044b\u0435_\u0441\u043b\u0443\u0447\u0430\u0438",
-      "agent_reports_testing_\u043f\u0440\u043e\u0432\u0435\u0440\u043a\u0430_\u0441\u043f\u0440\u0438\u043d\u0442\u0430_2",
-      "agent_reports_testing_\u043f\u0440\u043e\u0432\u0435\u0440\u043a\u0430_\u0441\u043f\u0440\u0438\u043d\u0442\u0430_3",
-      "agent_reports_testing_\u043f\u0440\u043e\u0432\u0435\u0440\u043a\u0430_\u0441\u043f\u0440\u0438\u043d\u0442\u0430_4",
-      "agent_reports_testing_\u043f\u0440\u043e\u0432\u0435\u0440\u043a\u0430_\u0441\u043f\u0440\u0438\u043d\u0442\u0430_5"
+      "agent_reports_testing_выполнено",
+      "agent_reports_testing_не_проверено",
+      "agent_reports_testing_покрытые_случаи",
+      "agent_reports_testing_проверка_спринта_2",
+      "agent_reports_testing_проверка_спринта_3",
+      "agent_reports_testing_проверка_спринта_4",
+      "agent_reports_testing_проверка_спринта_5"
     ],
     "18": [
       "tools_check_production_config",
@@ -434,13 +434,8 @@
       "degree": 9
     },
     {
-      "id": "analysis_2026_3_\u043f\u0440\u043e\u0431\u043b\u0435\u043c\u0430_\u0441_\u044f\u043d\u0434\u0435\u043a\u0441_\u043c\u0435\u0442\u0440\u0438\u043a\u043e\u0439_\u043d\u0430_\u043f\u0440\u043e\u0434\u0430\u043a\u0448\u0435\u043d\u0435",
-      "label": "3. \u041f\u0440\u043e\u0431\u043b\u0435\u043c\u0430 \u0441 \u042f\u043d\u0434\u0435\u043a\u0441.\u041c\u0435\u0442\u0440\u0438\u043a\u043e\u0439 \u043d\u0430 \u043f\u0440\u043e\u0434\u0430\u043a\u0448\u0435\u043d\u0435",
-      "degree": 8
-    },
-    {
-      "id": "agents_model_routing",
-      "label": "Model routing",
+      "id": "src_types_promotion_promotion",
+      "label": "Promotion",
       "degree": 8
     },
     {
@@ -449,37 +444,42 @@
       "degree": 8
     },
     {
-      "id": "src_types_promotion_promotion",
-      "label": "Promotion",
+      "id": "agents_model_routing",
+      "label": "Model routing",
       "degree": 8
     },
     {
-      "id": "agent_reports_summary_\u0430\u0443\u0434\u0438\u0442_\u043f\u0440\u043e\u0435\u043a\u0442\u0430_\u0438_\u043f\u043b\u0430\u043d_\u0440\u0435\u0444\u0430\u043a\u0442\u043e\u0440\u0438\u043d\u0433\u0430",
-      "label": "\u0410\u0443\u0434\u0438\u0442 \u043f\u0440\u043e\u0435\u043a\u0442\u0430 \u0438 \u043f\u043b\u0430\u043d \u0440\u0435\u0444\u0430\u043a\u0442\u043e\u0440\u0438\u043d\u0433\u0430",
-      "degree": 7
+      "id": "analysis_2026_3_проблема_с_яндекс_метрикой_на_продакшене",
+      "label": "3. Проблема с Яндекс.Метрикой на продакшене",
+      "degree": 8
     },
     {
-      "id": "agent_reports_summary_\u043f\u043b\u0430\u043d_\u0440\u0435\u0444\u0430\u043a\u0442\u043e\u0440\u0438\u043d\u0433\u0430_\u043f\u043e_\u0441\u043f\u0440\u0438\u043d\u0442\u0430\u043c",
-      "label": "\u041f\u043b\u0430\u043d \u0440\u0435\u0444\u0430\u043a\u0442\u043e\u0440\u0438\u043d\u0433\u0430 \u043f\u043e \u0441\u043f\u0440\u0438\u043d\u0442\u0430\u043c",
+      "id": "src_data_promotiondiagnostics_collectconfigdiagnostics",
+      "label": "collectConfigDiagnostics()",
       "degree": 7
     },
     {
       "id": "src_composables_usepromotions_usepromotions",
       "label": "usePromotions()",
       "degree": 7
+    },
+    {
+      "id": "agent_reports_summary_аудит_проекта_и_план_рефакторинга",
+      "label": "Аудит проекта и план рефакторинга",
+      "degree": 7
     }
   ],
   "surprises": [
     {
-      "source": "endText",
-      "target": "formatPromotionEndText()",
+      "source": "infoActions()",
+      "target": "waitForAppPrerequisites()",
       "source_files": [
-        "src/components/InfoActions/Card/Card.vue",
-        "src/data/promotionDates.ts"
+        "src/scripts/info-actions.js",
+        "src/scripts/waitForAppPrerequisites.ts"
       ],
       "confidence": "EXTRACTED",
       "relation": "calls",
-      "why": "peripheral node `endText` unexpectedly reaches hub `formatPromotionEndText()`"
+      "why": "peripheral node `infoActions()` unexpectedly reaches hub `waitForAppPrerequisites()`"
     },
     {
       "source": "usePromotions()",
@@ -493,15 +493,15 @@
       "why": "bridges separate communities"
     },
     {
-      "source": "infoActions()",
-      "target": "waitForAppPrerequisites()",
+      "source": "endText",
+      "target": "formatPromotionEndText()",
       "source_files": [
-        "src/scripts/info-actions.js",
-        "src/scripts/waitForAppPrerequisites.ts"
+        "src/components/InfoActions/Card/Card.vue",
+        "src/data/promotionDates.ts"
       ],
       "confidence": "EXTRACTED",
       "relation": "calls",
-      "why": "peripheral node `infoActions()` unexpectedly reaches hub `waitForAppPrerequisites()`"
+      "why": "peripheral node `endText` unexpectedly reaches hub `formatPromotionEndText()`"
     },
     {
       "source": "observe()",
@@ -515,19 +515,52 @@
       "why": "cross-file semantic connection"
     },
     {
-      "source": "publishPromotionClick()",
-      "target": "dispatchPromotionClick()",
+      "source": "usePromotions()",
+      "target": "filterFreshOffers()",
       "source_files": [
-        "src/composables/usePromotionContext.ts",
-        "src/analytics/promotionEvents.ts"
+        "src/composables/usePromotions.ts",
+        "src/data/promotionDates.ts"
       ],
       "confidence": "EXTRACTED",
       "relation": "calls",
       "why": "cross-file semantic connection"
     }
   ],
-  "tokens": {
-    "input": 0,
-    "output": 0
-  }
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `Promotion` connect `promoSchema.ts` to `usePromotionContext.ts`, `InfoActions.vue`, `Card.vue`?",
+      "why": "High betweenness centrality (0.015) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `Model routing` connect `Model routing` to `AGENTS.md`?",
+      "why": "High betweenness centrality (0.008) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `usePromotions()` connect `Card.vue` to `InfoActions.vue`, `promoSchema.ts`?",
+      "why": "High betweenness centrality (0.006) - this node is a cross-community bridge."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 2 inferred relationships involving `normalizeString()` (e.g. with `isBonusPromotion()` and `parseFilters()`) actually correct?",
+      "why": "`normalizeString()` has 2 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `BonusGoalParams`, `Window`, `YmFunction` to the rest of the system?",
+      "why": "178 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `AGENTS.md` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.06451612903225806 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `brand.ts` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.09359605911330049 - nodes in this community are weakly interconnected."
+    }
+  ]
 }

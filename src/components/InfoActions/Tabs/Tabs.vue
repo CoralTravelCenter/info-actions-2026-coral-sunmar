@@ -2,10 +2,11 @@
 import {nextTick, ref, watch} from "vue";
 import {useMediaQuery} from "@vueuse/core";
 import {useFixedNavigation} from "../../../composables/useFixedNavigation";
-import {BRAND} from "../../../config/brand";
+import type {Brand} from "../../../config/brand";
 
-defineProps<{
+const props = defineProps<{
 	filters: readonly string[];
+	brand: Brand;
 }>();
 
 const anchorRef = ref<HTMLElement | null>(null);
@@ -18,12 +19,12 @@ const {anchorStyle, isFixed, isVisible, navigationStyle} = useFixedNavigation(
 	{
 		desktopQuery: "(min-width: 992px)",
 		tabletQuery: "(min-width: 768px)",
-		mobileTop: BRAND === "sunmar" ? 65 : 57,
+		mobileTop: props.brand === "sunmar" ? 65 : 57,
 		tabletTop: 41,
 		desktopTop: 0,
-		hideStep: 48,
+		hideStep: 96,
 		showDistance: 24,
-		hideConfirmations: 2,
+		hideConfirmations: 3,
 	},
 );
 
@@ -56,6 +57,8 @@ watch(model, async () => {
 				ref="navigationRef"
 				class="tabs-navigation"
 				:class="{
+					'tabs-navigation--coral': brand === 'coral',
+					'tabs-navigation--sunmar': brand === 'sunmar',
 					'tabs-navigation--fixed': isFixed,
 					'tabs-navigation--hidden': isFixed && !isVisible,
 				}"
@@ -63,7 +66,7 @@ watch(model, async () => {
 		>
 			<menu
 				ref="listRef"
-				class="tabs-navigation__list no-scrollbar"
+				class="tabs-navigation__list"
 				aria-label="Фильтры акций"
 			>
 				<li

@@ -24,17 +24,20 @@ describe("dispatchPromotionClick", () => {
     vi.stubGlobal("CustomEvent", CustomEventStub);
 
     dispatchPromotionClick({
+      id: "asian-weeks-2026",
       name: "Азиатские недели",
       url: "/offers/asian-weeks/",
     });
 
     expect(dispatchEvent).toHaveBeenCalledOnce();
     const event = dispatchEvent.mock.calls[0]?.[0] as CustomEventStub<{
+      id: string;
       name: string;
       url: string;
     }>;
     expect(event.type).toBe(PROMOTION_CLICK_EVENT);
     expect(event.detail).toEqual({
+      id: "asian-weeks-2026",
       name: "Азиатские недели",
       url: "/offers/asian-weeks/",
     });

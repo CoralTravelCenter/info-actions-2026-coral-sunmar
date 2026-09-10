@@ -11,15 +11,18 @@
 ## Реализация
 
 - Явно отмечены legacy-поле `filter` и каноническое поле `filters`.
-- Добавлена неблокирующая диагностика внешнего контракта: строгий формат и календарная корректность дат, обратный диапазон, неподдерживаемые URL-схемы, неверные типы `filters` и `analytics.bonusImpression`, одновременное использование canonical/legacy-полей.
+- Добавлена неблокирующая диагностика внешнего контракта: строгий формат и календарная корректность дат, обратный
+  диапазон, неподдерживаемые URL-схемы, неверные типы `filters` и `analytics.bonusImpression`, одновременное
+  использование canonical/legacy-полей.
 - Использование `filter` и `ligal` агрегируется в два сообщения, чтобы не создавать предупреждение на каждую запись.
-- Контрактные отклонения пишутся в console только там, где уже вызывается dev/debug-диагностика. В UI возвращаются только прежние блокирующие ошибки.
+- Контрактные отклонения пишутся в console только там, где уже вызывается dev/debug-диагностика. В UI возвращаются
+  только прежние блокирующие ошибки.
 - Нормализация, фильтрация и рендер-поведение не изменялись; legacy-совместимость сохранена.
 
 ## Ограничения
 
 - Legacy-поля нельзя удалять до миграции внешнего скрипта.
-- Диагностика URL проверяет синтаксис и разрешает только HTTP(S), но не проверяет доступность ресурса по сети.
+- Диагностика URL проверяет синтаксис и разрешает только HTTP (S), но не проверяет доступность ресурса по сети.
 - Graphify не обновлялся в рамках production-спринта.
 
 ---
@@ -37,8 +40,10 @@
 ## Реализация
 
 - Удалены все пять `!important` из стилей карточки.
-- Для ссылки/кнопки использован локальный селектор `.promo-card .promo-card__link`, который предсказуемо перекрывает глобальный `section.coral .prime-btn`.
-- Добавлены отсутствующие семантические токены: `--color_Status_Success`, `--color_Sunmar_Primary`, `--color_Sunmar_Surface`.
+- Для ссылки/кнопки использован локальный селектор `.promo-card .promo-card__link`, который предсказуемо перекрывает
+  глобальный `section.coral .prime-btn`.
+- Добавлены отсутствующие семантические токены: `--color_Status_Success`, `--color_Sunmar_Primary`,
+  `--color_Sunmar_Surface`.
 - Белые поверхности и нейтральный цвет иконок переведены на существующие `--color_Base_Light` и `--color_Header_Icon`.
 - Цвета inline SVG переведены на CSS custom properties без изменения структуры иконок.
 
@@ -65,7 +70,8 @@
 
 - README дополнен актуальным контрактом данных, диагностикой, composables, image priority и CSS-токенами.
 - Ручное отключение DEV-фикстуры закреплено как согласованный production-процесс.
-- `REFACTORING.md` переписан как компактное описание текущей архитектуры, выполненных работ, ограничений и следующих самостоятельных задач.
+- `REFACTORING.md` переписан как компактное описание текущей архитектуры, выполненных работ, ограничений и следующих
+  самостоятельных задач.
 - `ANALYSIS-2026.md` явно обозначен как исторический аудит.
 - Graphify обновлён после завершения production-спринтов.
 
@@ -87,7 +93,8 @@
 - `src/utils/filterFreshOffers.test.ts` → `src/data/promotionDates.test.ts`
 - `src/utils/configWarnings.ts` → `src/data/promotionDiagnostics.ts`
 - `src/utils/configWarnings.test.ts` → `src/data/promotionDiagnostics.test.ts`
-- обновлены прямые импорты в `src/scripts/info-actions.js`, `src/composables/usePromotions.ts`, `src/components/InfoActions/InfoActions.vue`
+- обновлены прямые импорты в `src/scripts/info-actions.js`, `src/composables/usePromotions.ts`,
+  `src/components/InfoActions/InfoActions.vue`
 
 ## Реализация
 
@@ -126,8 +133,7 @@
 - Значение берётся из нормализованного `promotion.nameText`, поэтому не содержит `<br>`.
 - Удалены `version`, технический ID, URL, фильтры, бренд, позиция и destination.
 - Ссылка и popup-кнопка публикуют одинаковый контракт.
-- EventTarget изменён с `window` на `document`, поскольку внешний обработчик работает в
-  том же документе страницы.
+- EventTarget изменён с `window` на `document`, поскольку внешний обработчик работает в том же документе страницы.
 - CoralBonus-логика и директива показов не изменялись.
 
 ## Ограничение
@@ -145,14 +151,13 @@
 - `external-scripts/promotion-click-metrika-coral.js`
 - `external-scripts/promotion-click-metrika-sunmar.js`
 - `external-scripts/promotion-click-metrika.test.js`
-- `src/data/promotion-settings.js`
+- `../src/data/promotion-settings-coral.js`
 - `README.md`
 - `REFACTORING.md`
 
 ## Реализация
 
-- Созданы два независимых обработчика: Coral со счётчиком `96674199` и Sunmar со
-  счётчиком `215233`.
+- Созданы два независимых обработчика: Coral со счётчиком `96674199` и Sunmar со счётчиком `215233`.
 - Каждый скрипт содержит только listener, получение `name`, `switch/case` и вызов Метрики.
 - В Coral перенесены три непустых соответствия `name → entry_point` из локальной фикстуры.
 - В Sunmar перенесены три непустых соответствия из предоставленного конфига.
@@ -176,7 +181,8 @@
 
 ## Реализация
 
-- Количество приоритетных изображений соответствует первому ряду фактической сетки: mobile — 1, tablet — 2, desktop Coral — 4, desktop Sunmar — 3.
+- Количество приоритетных изображений соответствует первому ряду фактической сетки: mobile — 1, tablet — 2, desktop
+  Coral — 4, desktop Sunmar — 3.
 - `InfoActions.vue` передаёт карточке признак `prioritizeImage` на основании позиции в отфильтрованном списке.
 - Приоритетные изображения получают `loading="eager"` и `fetchpriority="high"`.
 - Остальные изображения сохраняют `loading="lazy"` и нейтральный `fetchpriority="auto"`.

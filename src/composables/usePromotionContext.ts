@@ -21,9 +21,10 @@ export function usePromotionContext() {
   }
 
   function publishPromotionClick(
-    promotion: Pick<Promotion, "nameText" | "url">,
+    promotion: Pick<Promotion, "id" | "nameText" | "url">,
   ): void {
     dispatchPromotionClick({
+      id: promotion.id,
       name: promotion.nameText,
       url: promotion.url,
     });

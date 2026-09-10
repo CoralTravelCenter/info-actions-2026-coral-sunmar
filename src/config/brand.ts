@@ -28,6 +28,7 @@ export function detectBrand(
 
 /** Неизвестный домен получает только визуальную Coral-тему, но не аналитику. */
 export const ANALYTICS_BRAND = detectBrand();
+// TEMP: принудительная тема Sunmar для визуального тестирования.
 export const BRAND = ANALYTICS_BRAND ?? BRAND_OPTIONS.CORAL;
 
 const METRIKA_BY_BRAND = Object.freeze({

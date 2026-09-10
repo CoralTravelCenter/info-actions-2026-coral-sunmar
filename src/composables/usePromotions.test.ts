@@ -10,12 +10,14 @@ describe("usePromotions", () => {
     const state = scope.run(() =>
       usePromotions([
         {
+          id: "limited",
           name: "Ограниченная акция",
           visual: "timed.webp",
           filter: "Скоро закончится",
           promo_end: "2026-09-01 11:01",
         },
         {
+          id: "permanent",
           name: "Постоянная акция",
           visual: "stable.webp",
           filter: "Постоянные",
@@ -44,16 +46,19 @@ describe("usePromotions", () => {
   it("добавляет сроковой фильтр и сортирует его по ближайшему завершению", () => {
     const state = usePromotions([
       {
+        id: "later",
         name: "Поздняя",
         visual: "later.webp",
         promo_end: "2026-09-25 23:59",
       },
       {
+        id: "sooner",
         name: "Ближайшая",
         visual: "sooner.webp",
         promo_end: "2026-09-10 23:59",
       },
       {
+        id: "long",
         name: "Долгая",
         visual: "long.webp",
         promo_end: "2026-12-31 23:59",

@@ -4,6 +4,7 @@ import type {Promotion} from "../types/promotion";
 import {buildPromotionCatalog} from "./promotionCatalog";
 
 const promotion: Promotion = {
+  id: "coral-example",
   name: "Акция<br>Coral",
   nameText: "Акция Coral",
   nameHtml: "Акция<br>Coral",

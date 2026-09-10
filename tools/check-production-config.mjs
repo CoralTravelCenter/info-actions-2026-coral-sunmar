@@ -6,19 +6,19 @@ const activeLocalConfigImport = /^\s*import\s+["']\.\.\/data\/promotion-settings
 
 let entrySource;
 try {
-  await readFile(outputPath, "utf8");
-  entrySource = await readFile(entryPath, "utf8");
+    await readFile(outputPath, "utf8");
+    entrySource = await readFile(entryPath, "utf8");
 } catch {
-  console.error("[production-config] Сначала выполните npm run build.");
-  process.exit(1);
+    console.error("[production-config] Сначала выполните npm run build.");
+    process.exit(1);
 }
 
 if (activeLocalConfigImport.test(entrySource)) {
-  console.error(
-    "[production-config] Локальный конфиг попал в сборку. " +
-      "Закомментируйте import promotion-settings.js и повторите npm run build.",
-  );
-  process.exit(1);
+    console.error(
+        "[production-config] Локальный конфиг попал в сборку. " +
+        "Закомментируйте import promotion-settings-coral.js и повторите npm run build.",
+    );
+    process.exit(1);
 }
 
 console.info("[production-config] Локальный конфиг в сборке не найден.");

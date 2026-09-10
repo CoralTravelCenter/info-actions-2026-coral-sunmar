@@ -1,0 +1,227 @@
+/**
+ * @typedef {Object} PromotionConfig
+ * @property {string} id Стабильный технический идентификатор акции; не изменяется при переименовании.
+ * @property {string[]} filters Категории, в которых акция отображается в интерфейсе.
+ * @property {string} name Название акции. Для переноса строки допускается тег `<br>`.
+ * @property {string} visual URL изображения карточки акции.
+ * @property {string} [url] Ссылка, которая открывается при выборе акции.
+ * @property {string} [description] Краткое описание акции. Для переноса строки допускается тег `<br>`.
+ * @property {string} [legal] Наименование рекламодателя; ИНН можно указать в конце строки.
+ * @property {string} [erid] Идентификатор рекламного материала для маркировки рекламы.
+ * @property {string} [promo_start] Дата начала показа в формате `YYYY-MM-DD HH:mm`.
+ * @property {string} [promo_end] Дата окончания показа в формате `YYYY-MM-DD HH:mm`.
+ */
+
+/** @type {PromotionConfig[]} */
+
+window._promotion_settings = [{
+    "id": "regional-departures-2026",
+    "filters": ["По направлениям"],
+    "name": "Из вашего города — к морю и новым впечатлениям",
+    "visual": "https://b2ccdn.sunmar.ru/content/actions/actions_page_sunmar_from_your_city.webp",
+    "url": "/directclient/info-actions/skidka-iz-gorodov/?banner_on_site=offers-iz-gorodov",
+    "description": "Скидка до 10 000 ₽ на туры",
+    "legal": "ООО «МирТурСервис»",
+    "erid": "2W5zFHGKuqK",
+    "promo_end": "2026-09-30 23:59"
+},
+    {
+        "id": "el-alamein-egypt-2026",
+        "filters": ["По направлениям"],
+        "name": "Эль-Аламейн – курорт с белоснежными пляжами",
+        "visual": "https://b2ccdn.sunmar.ru/content/img/egypt/New_Promo_Sunmar_324x180_alamein.png",
+        "url": "/egypt/el-alamejn/?banner_on_site=offers-el-alamejn",
+        "description": "Отправьтесь в Египет, в котором вы еще не отдыхали",
+        "legal": "ООО «МирТурСервис»",
+        "erid": "2W5zFHoJurH",
+        "promo_end": ""
+    },
+    {
+        "id": "new-year-ready-2026",
+        "filters": ["По направлениям"],
+        "name": "На всё готовое —<br> в Новый год",
+        "visual": "https://b2ccdn.sunmar.ru/content/img/Акции_banner_Sunmar_432x250_ny.jpg",
+        "url": "/directclient/info-actions/puteshestvie-novyi-god/?banner_on_site=offers-puteshestvie-novyi-god",
+        "description": "Инвестируйте в зимние праздники<br>  от 198 036 ₽ за двоих",
+        "legal": "ООО «МирТурСервис»",
+        "erid": "2W5zFJxabgm",
+        "promo_end": ""
+    },
+    {
+        "id": "september-summer-2026",
+        "filters": ["По направлениям", "Акции отелей"],
+        "name": "Сентябрь звучит по-летнему",
+        "visual": "https://b2ccdn.sunmar.ru/content/img/actions/action_banner_Sunmar_432x250_september26.webp",
+        "url": "https://www.sunmar.ru/directclient/info-actions/skidki-na-sentyabr/?banner_on_site=offers-sept26",
+        "description": "Туры в начале осени от 94 354 ₽ за двоих",
+        "legal": "ООО «МирТурСервис»",
+        "erid": "2W5zFGxY2Yq",
+        "promo_end": "2026-09-14 23:59"
+    },
+    {
+        "id": "hotel-only-discount-2026",
+        "filters": ["По направлениям", "Акции отелей"],
+        "name": "Тысячи отличных отелей",
+        "visual": "https://b2ccdn.sunmar.ru/content/img/actions/Акции_banner_Sunmar_432x250_Onlyhotel.webp",
+        "url": "https://www.sunmar.ru/bookinghotel/?p=2&banner_on_site=offers-onlyhotel",
+        "description": "Со скидкой до 10 000 ₽",
+        "legal": "ООО «МирТурСервис»",
+        "erid": "2W5zFGLodAh",
+        "promo_end": "2026-09-30 23:59"
+    },
+    {
+        "id": "family-early-booking-2027",
+        "filters": ["По направлениям", "Акции отелей"],
+        "name": "Приезжайте всей семьей",
+        "visual": "https://b2ccdn.sunmar.ru/content/img/actions/New_Promo_page_Sunmar_432x250_EB2026-2027.webp",
+        "url": "/directclient/info-actions/rb-2026-2027/?banner_on_site=offers-eb-zima2027",
+        "description": "Тот самый отпуск, где уютно каждому и не тесно никому",
+        "legal": "ООО «МирТурСервис»",
+        "erid": "2W5zFJRMno3",
+        "promo_end": "2026-10-31 23:59"
+    },
+    {
+        "id": "double-benefit-hotels-2026",
+        "filters": ["По направлениям", "Акции отелей"],
+        "name": "Ловите двойную волну выгоды!",
+        "visual": "https://b2ccdn.sunmar.ru/content/img/actions/New_Promo_page_Sunmar_432x250_volny-vigody.webp",
+        "url": "/directclient/info-actions/lovite-dvoInuyu-volny-vygody/?banner_on_site=offers-volny-vigody",
+        "description": "Собрали самые сочные предложения на лето",
+        "legal": "ООО «МирТурСервис»",
+        "erid": "2W5zFJ6J2B3",
+        "promo_end": "2026-07-20 23:59"
+    },
+    {
+        "id": "summer-sea-2026",
+        "filters": ["По направлениям", "Акции отелей"],
+        "name": "Хотим на море!",
+        "visual": "https://b2ccdn.sunmar.ru/content/img/actions/Offers%20page.webp",
+        "url": "/directclient/info-actions/na-more-letom/?banner_on_site=offers-na-more-letom",
+        "description": "Летим на море со скидкой до 7 500 ₽",
+        "legal": "ООО «МирТурСервис»",
+        "erid": "2W5zFG643aR",
+        "promo_end": "2026-07-20 23:59"
+    },
+    {
+        "id": "winter-early-booking-2026",
+        "filters": ["По направлениям"],
+        "name": "Теплые планы на холодный сезон",
+        "visual": "https://b2ccdn.sunmar.ru/content/img/offers_coral_432x250.webp",
+        "url": "/rb-winter/?banner_on_site=offers-rb-winter",
+        "description": "Бронируйте путешествия заранее с выгодой",
+        "legal": "ООО «МирТурСервис»",
+        "erid": "2W5zFGeoWcZ",
+        "promo_end": "2026-10-31 23:59"
+    },
+    {
+        "id": "summer-early-booking-2027",
+        "filters": ["По направлениям"],
+        "name": "Поймайте волну <br>скидок до 50%",
+        "visual": "https://b2ccdn.sunmar.ru/content/img/Акции_banner_Sunmar_432x250_summer_2027%20(1).webp",
+        "url": "/rb-summer/?banner_on_site=offers-rb-summer",
+        "description": "Акция «Раннее бронирование» уже стартовала",
+        "legal": "ООО «МирТурСервис»",
+        "erid": "2W5zFH4V22M",
+        "promo_end": "2026-12-31 23:59"
+    },
+    {
+        "id": "kids-stay-free-2026",
+        "filters": ["По направлениям", "Акции отелей"],
+        "name": "Дети отдыхают БЕСПЛАТНО",
+        "visual": "https://b2ccdn.sunmar.ru/content/img/actions/2+2action.jpg",
+        "url": "/directclient/info-actions/besplatnyj-otdyh-dlya-detej/?banner_on_site=offers-besplatnyj-otdyh-dlya-detej",
+        "description": "Выберите лучший семейный отель",
+        "legal": "ООО «МирТурСервис»",
+        "erid": "2W5zFJd6NVE",
+        "promo_end": "2026-10-31 23:59"
+    },
+    {
+        "id": "sunmarbonus-33000-steps-2026",
+        "filters": ["SunmarBonus"],
+        "name": "SunmarBonus. На 33 000 шагов ближе к лету!",
+        "visual": "https://b2ccdn.sunmar.ru/content/img/actions/sunmarbonus_432x250_33k_shagov.webp",
+        "url": "https://sunmarbonus.ru/promo/na-33-000-shagov-blizhe-k-letu/?banner_on_site=offers-sunmarbonus-33k-shagov",
+        "description": "Участвуйте в розыгрыше 33 000 бонусов на путешествие! 1 бонус = 1 рубль",
+        "legal": "ООО «КОРТРЕВЕЛ МАРКЕТ» ИНН 7703263207",
+        "erid": "2W5zFFy9NM7",
+        "app_erid": "2W5zFFy9NM7",
+        "promo_end": "2026-08-21 23:59"
+    },
+    {
+        "id": "sunmarbonus-welcome",
+        "filters": ["SunmarBonus"],
+        "name": "SunmarBonus «Мы вам рады!»",
+        "visual": "https://b2ccdn.sunmar.ru/content/img/actions/sunmarbonus.jpg",
+        "url": "/info-actions/programma-loyalynosti-sunmarbonus/?banner_on_site=offers-sunmarbonus/",
+        "description": "Активируйте бонусную карту и получите 10 000 приветственных бонусов на счет",
+        "legal": "ООО «КОРТРЕВЕЛ МАРКЕТ» ИНН 7703263207",
+        "erid": "2W5zFHRbZtd",
+        "promo_end": ""
+    },
+    {
+        "id": "sunmar-fortuna",
+        "filters": ["По направлениям"],
+        "name": "Sunmar ФОРТУНА",
+        "visual": "https://b2ccdn.sunmar.ru/content/img/actions/fortuna.jpg",
+        "url": "/action-fortuna/?banner_on_site=offers-fortuna/",
+        "description": "Отдых по очень выгодным ценам!",
+        "legal": "ООО «МирТурСервис»",
+        "erid": "2W5zFG9A8Wk",
+        "promo_end": ""
+    },
+    {
+        "id": "last-minute-tours",
+        "filters": ["По направлениям"],
+        "name": "Горящие предложения",
+        "visual": "https://b2ccdn.sunmar.ru/content/img/actions/hot_tours.jpg",
+        "url": "/info-actions/goryashie-tury/?banner_on_site=offers-goryashie-tury/",
+        "description": "Для туристов, которые хотят улететь в ближайшее время",
+        "legal": "ООО «МирТурСервис»",
+        "erid": "2W5zFGXPwjv",
+        "promo_end": ""
+    },
+    {
+        "id": "russia-kids-stay-free",
+        "filters": ["Акции отелей"],
+        "name": "Бесплатный отдых для детей",
+        "visual": "https://b2ccdn.sunmar.ru/content/img/actions/Children.jpg",
+        "url": "/kak-vygodno-otdohnuty-s-detymi-v-rossii/?banner_on_site=offers-otdohnuty-s-detymi-v-rossii/",
+        "description": "Отели России с бесплатным проживанием для детей",
+        "legal": "ООО «МирТурСервис»",
+        "erid": "2W5zFGrfnQQ",
+        "promo_end": ""
+    },
+    {
+        "id": "turkiye-premium-hotels",
+        "filters": ["По направлениям"],
+        "name": "Не ищите способы сэкономить на роскоши, мы уже подумали за вас",
+        "visual": "https://b2ccdn.sunmar.ru/content/img/actions/elite.jpg",
+        "url": "/chotel-turkey-premium/?banner_on_site=offers-chotel-turkey-premium/",
+        "description": "Подборка премиальных отелей в Турции",
+        "legal": "ООО «МирТурСервис»",
+        "erid": "2W5zFHHsaCG",
+        "promo_end": ""
+    },
+    {
+        "id": "hotel-special-offers",
+        "filters": ["Акции отелей"],
+        "name": "Акции отелей",
+        "visual": "https://b2ccdn.sunmar.ru/content/img/actions/credit_rassrochka_sunmar1.png",
+        "url": "/action-hotels/?banner_on_site=offers-akcii-oteley/",
+        "description": "Эксклюзивные скидки, бонусы и подарки",
+        "legal": "ООО «МирТурСервис»",
+        "erid": "2W5zFJbsitZ",
+        "promo_end": ""
+    },
+    {
+        "id": "uae-hotel-service-packages",
+        "filters": ["Акции отелей"],
+        "name": "Пакеты услуг в отелях ОАЭ",
+        "visual": "https://b2ccdn.sunmar.ru/content/img/actions/service-packages.jpg",
+        "url": "/hotels-service-packages/?banner_on_site=offers-service-packages/",
+        "description": "Выбирайте и заранее оплачивайте пакет дополнительных услуг в отеле ОАЭ",
+        "legal": "ООО «МирТурСервис»",
+        "erid": "2W5zFHVjUT2",
+        "promo_end": ""
+    }
+];

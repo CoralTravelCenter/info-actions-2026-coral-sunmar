@@ -1,7 +1,6 @@
 /**
- * Локальная конфигурация промо-кампании для разработки.
- *
  * @typedef {Object} PromotionConfig
+ * @property {string} id Стабильный технический идентификатор акции; не изменяется при переименовании.
  * @property {string[]} filters Категории, в которых акция отображается в интерфейсе.
  * @property {string} name Название акции. Для переноса строки допускается тег `<br>`.
  * @property {string} visual URL изображения карточки акции.
@@ -14,19 +13,20 @@
  */
 
 /** @type {PromotionConfig[]} */
-window._promotion_settings = [
+window._promotion_settings = [{
+    "filters": ["По направлениям"],
+    "id": "worldwide-hotels-booking-2026",
+    "name": "Бронирование отелей по всему миру",
+    "visual": "https://b2ccdn.coral.ru/content/actions/new_promo_coral_324x180_millions_of_options.webp",
+    "url": "/hotel/?banner_on_site=offers-millions",
+    "description": "Скидка до 12 000 ₽ на отели",
+    "legal": "ООО «Центрбронь»",
+    "erid": "2W5zFJU213P",
+    "promo_end": "2026-09-30 23:59",
+},
     {
         "filters": ["По направлениям"],
-        "name": "Бронирование отелей по всему миру",
-        "visual": "https://b2ccdn.coral.ru/content/actions/new_promo_coral_324x180_millions_of_options.webp",
-        "url": "/hotel/?banner_on_site=offers-millions",
-        "description": "Скидка до 12 000 ₽ на отели",
-        "legal": "ООО «Центрбронь»",
-        "erid": "2W5zFJU213P",
-        "promo_end": "2026-09-30 23:59",
-    },
-    {
-        "filters": ["По направлениям"],
+        "id": "el-alamein-egypt-2026",
         "name": "Эль-Аламейн – Египет, который вы не видели",
         "visual": "https://b2ccdn.coral.ru/content/img/new_promo_coral_324x180.webp",
         "url": "/main/egypt/el-alamejn/?banner_on_site=offers-el-alamejn",
@@ -37,6 +37,7 @@ window._promotion_settings = [
     },
     {
         "filters": ["По направлениям"],
+        "id": "asian-weeks-2026",
         "name": "Азиатские недели<br>с Coral Travel",
         "visual": "https://b2ccdn.coral.ru/content/img/actions/new_promo_coral_324x180_konkurs_1.jpg",
         "url": "/poleznaya-informatsiya/offers/hot-offers/aziatskie-nedeli/?banner_on_site=offers-aziatskie-nedeli",
@@ -47,6 +48,7 @@ window._promotion_settings = [
     },
     {
         "filters": ["По направлениям"],
+        "id": "september-sea-for-two-2026",
         "name": "Сентябрь, море и вы вдвоем",
         "visual": "https://b2ccdn.coral.ru/content/img/All_countries/new_september_promo_coral_324x180.webp",
         "url": "/poleznaya-informatsiya/offers/hot-offers/otdyh-v-sentyabre-na-more/?banner_on_site=offers-na-more",
@@ -57,6 +59,7 @@ window._promotion_settings = [
     },
     {
         "filters": ["По направлениям"],
+        "id": "new-year-program-2026",
         "name": "Зажгите новогоднее настроение",
         "visual": "https://b2ccdn.coral.ru/content/img/actions/specpredlozhenie-na-novogodnie.png",
         "url": "/poleznaya-informatsiya/offers/hot-offers/specpredlozhenie-na-novogodnie/?banner_on_site=offers-specpredlozhenie-na-novogodnie",
@@ -67,6 +70,7 @@ window._promotion_settings = [
     },
     {
         "filters": ["По направлениям"],
+        "id": "august-five-nights-2026",
         "name": "Румяньтесь с удовольствием",
         "visual": "https://b2ccdn.coral.ru/content/img/actions/offers_coral_384x256_tili-tili_testo.png",
         "url": "/poleznaya-informatsiya/offers/hot-offers/goryaschie-avgust-5-dnej/?banner_on_site=offers-avgust-5",
@@ -77,6 +81,7 @@ window._promotion_settings = [
     },
     {
         "filters": ["По направлениям"],
+        "id": "double-benefits-july-2026",
         "name": "Удвойте свою выгоду на отдых в июле",
         "visual": "https://b2ccdn.coral.ru/content/img/actions/new_promo_coral_324x180_double.png",
         "url": "/poleznaya-informatsiya/offers/hot-offers/double-benefits-june-july/?banner_on_site=offers-double",
@@ -87,6 +92,7 @@ window._promotion_settings = [
     },
     {
         "filters": ["По направлениям"],
+        "id": "turkey-summer-2026",
         "name": "Выгодные путешествия летом!",
         "visual": "https://b2ccdn.coral.ru/content/new_promo_coral_324x180_june.jpg",
         "url": "/poleznaya-informatsiya/offers/hot-offers/turkey-june/?banner_on_site=offers-turkey-june",
@@ -97,6 +103,7 @@ window._promotion_settings = [
     },
     {
         "filters": ["По направлениям"],
+        "id": "globus-summer-2026",
         "name": "Лето ярче c Сoral Travel",
         "visual": "https://b2ccdn.coral.ru/content/offers_banner.webp",
         "url": "/poleznaya-informatsiya/offers/hot-offers/globus/?banner_on_site=offers-globus",
@@ -107,6 +114,7 @@ window._promotion_settings = [
     },
     {
         "filters": ["По направлениям"],
+        "id": "winter-early-booking-2026",
         "name": "С нами даже зима становится летом",
         "visual": "https://b2ccdn.coral.ru/content/img/offers_coral_324x180.webp",
         "url": "/hot-offers/rannee-bronirovanie-zima/?banner_on_site=main-bronirovanie-zima",
@@ -117,6 +125,7 @@ window._promotion_settings = [
     },
     {
         "filters": ["По направлениям"],
+        "id": "regional-autumn-tours-2026",
         "name": "Специальное предложение: скидка до 12000 ₽",
         "visual": "https://b2ccdn.coral.ru/content/img/actions/new_promo_coral_324x180_offers_reg_promo_osen.webp",
         "url": "https://www.coral.ru/poleznaya-informatsiya/offers/hot-offers/osennie-tury-iz-regionov/?banner_on_site=offers-reg_tury",
@@ -127,6 +136,7 @@ window._promotion_settings = [
     },
     {
         "filters": ["По направлениям"],
+        "id": "may-sea-tours-2026",
         "name": "Май: море, солнце и ни капли жары",
         "visual": "https://b2ccdn.coral.ru/content/img/new_promo_coral_324x180_may_ptashki.webp",
         "url": "/top-tours/may/?banner_on_site=offers-may",
@@ -137,6 +147,7 @@ window._promotion_settings = [
     },
     {
         "filters": ["По направлениям"],
+        "id": "summer-early-booking-2027",
         "name": "Инвестировать<br>в отдых просто!",
         "visual": "https://b2ccdn.coral.ru/content/img/new_promo_coral_324x180_summer_2027-324x180.webp",
         "url": "/hot-offers/rannee-bronirovanie-leto/?banner_on_site=offers-rannee-bronirovanie-leto",
@@ -147,6 +158,7 @@ window._promotion_settings = [
     },
     {
         "filters": ["По направлениям", "Акции отелей"],
+        "id": "kids-stay-free-2026",
         "name": "Отели Турции и Египта с бесплатным проживанием для двоих детей",
         "visual": "https://b2ccdn.coral.ru/content/img/actions/action2+2.png",
         "url": "/poleznaya-informatsiya/offers/hot-offers/aktsiya-deti-otdyhayut-besplatno/?banner_on_site=offers-deti-otdyhayut-besplatno",
@@ -157,6 +169,7 @@ window._promotion_settings = [
     },
     {
         "filters": ["CoralBonus"],
+        "id": "coralbonus-pearl-of-the-east-2026",
         "name": "CoralBonus.Жемчужина востока",
         "visual": "https://b2ccdn.coral.ru/content/img/actions/cb/zhemchuzhina_vostoka_aktsii.webp",
         "url": "https://coralbonus.ru/promo/zhemchuzhina-vostoka/?banner_on_site=offers-cb-zhemchuzhina-vostoka",
@@ -167,6 +180,7 @@ window._promotion_settings = [
     },
     {
         "filters": ["CoralBonus"],
+        "id": "coralbonus-rixos-egypt-2026",
         "name": "CoralBonus.Rixos Hotels в Египте",
         "visual": "https://b2ccdn.coral.ru/content/img/actions/cb/rixos_hotels_v_egipte_aktsii.webp",
         "url": "https://coralbonus.ru/promo/rixos-hotels-v-egipte/?banner_on_site=offers-cb-rixos-hotels-v-egipte",
@@ -177,6 +191,7 @@ window._promotion_settings = [
     },
     {
         "filters": ["CoralBonus"],
+        "id": "coralbonus-rixos-turkiye-2026",
         "name": "CoralBonus.Rixos Hotels в Турции",
         "visual": "https://b2ccdn.coral.ru/content/img/actions/cb/rixos_hotels_v_turtsii2.webp",
         "url": "https://coralbonus.ru/promo/rixos-hotels-turkiye/?banner_on_site=offers-cb-rixos-hotels-turkiye",
@@ -187,6 +202,7 @@ window._promotion_settings = [
     },
     {
         "filters": ["CoralBonus"],
+        "id": "coralbonus-rixos-tersane-istanbul-2026",
         "name": "CoralBonus.Rixos Tersane Istanbul",
         "visual": "https://b2ccdn.coral.ru/content/img/actions/cb/rixos_tersane_istanbul_aktsii.webp",
         "url": "https://coralbonus.ru/promo/rixos-tersane-istanbul/?banner_on_site=offers-cb-rixos-tersane-istanbul",
@@ -197,6 +213,7 @@ window._promotion_settings = [
     },
     {
         "filters": ["CoralBonus"],
+        "id": "coralbonus-place-in-the-sun-2026",
         "name": "CoralBonus. Место под солнцем",
         "visual": "https://b2ccdn.coral.ru/content/img/actions/cb/mmesto_pod_solntsem_325x180_1x_1.webp",
         "url": "https://coralbonus.ru/promo/mesto-pod-solnfem/?banner_on_site=offers-cb-mesto-pod-solnfem",
@@ -207,6 +224,7 @@ window._promotion_settings = [
     },
     {
         "filters": ["CoralBonus"],
+        "id": "coralbonus-nickelodeon-antalya-2026",
         "name": "CoralBonus. The Land of Legends Nickelodeon Hotels & Resorts Antalya",
         "visual": "https://b2ccdn.coral.ru/content/img/actions/cb/nh-325x180_bez_logo_2.webp",
         "url": "https://coralbonus.ru/promo/the-land-of-legends-nickelodeon-hotels-resorts-antalya/?banner_on_site=offers-cb-the-land-of-legends-nickelodeon-hotels-resorts-antalya",
@@ -217,6 +235,7 @@ window._promotion_settings = [
     },
     {
         "filters": ["CoralBonus"],
+        "id": "coralbonus-land-of-legends-kingdom-2026",
         "name": "CoralBonus.The Land Of Legends Kingdom Hotel",
         "visual": "https://b2ccdn.coral.ru/content/img/actions/cb/aktsiya-the-land-of-legends-kingdom-hotel-offers.jpg",
         "url": "https://coralbonus.ru/promo/the-land-of-legends-kingdom-hotel/?banner_on_site=offers-cb-the-land-of-legends-kingdom-hotel",
@@ -227,6 +246,7 @@ window._promotion_settings = [
     },
     {
         "filters": ["CoralBonus"],
+        "id": "coralbonus-wave-of-trust-2026",
         "name": "CoralBonus. На волне доверия",
         "visual": "https://b2ccdn.coral.ru/content/img/actions/cb/na_volne_325_x_180_1.png",
         "url": "https://coralbonus.ru/promo/na-volne-doveriya/?banner_on_site=offers-cb-na-volne-doveriya",
@@ -236,6 +256,7 @@ window._promotion_settings = [
     },
     {
         "filters": ["CoralBonus"],
+        "id": "coralbonus-xanadu-makadi-bay-2026",
         "name": "CoralBonus. XANADU MAKADI BAY",
         "visual": "https://b2ccdn.coral.ru/content/img/actions/cb/xanadu_makadi_bay_325h180_1.webp",
         "url": "https://coralbonus.ru/promo/xanadu-makadi-bay/?banner_on_site=offers-cb-xanadu-makadi-bay",
@@ -246,6 +267,7 @@ window._promotion_settings = [
     },
     {
         "filters": ["CoralBonus"],
+        "id": "coralbonus-seven-seas-jolie-bay-2026",
         "name": "CoralBonus. SEVEN SEAS JOLIE BAY",
         "visual": "https://b2ccdn.coral.ru/content/img/actions/cb/seven_seas_jolie_bay_325h180_1.webp",
         "url": "https://coralbonus.ru/promo/seven-seas-jolie-bay/?banner_on_site=offers-cb-seven-seas-jolie-bay",
@@ -256,6 +278,7 @@ window._promotion_settings = [
     },
     {
         "filters": ["CoralBonus"],
+        "id": "coralbonus-sherwood-resorts-2026",
         "name": "CoralBonus.Sherwood Resorts & Hotels",
         "visual": "https://b2ccdn.coral.ru/content/img/actions/cb/sherwood_325_x_180.webp",
         "url": "https://coralbonus.ru/promo/sherwood-2026/?banner_on_site=offers-cb-sherwood-resorts",
@@ -266,6 +289,7 @@ window._promotion_settings = [
     },
     {
         "filters": ["CoralBonus"],
+        "id": "coralbonus-papillon-hotels-2026",
         "name": "CoralBonus.Papillon Hotels",
         "visual": "https://b2ccdn.coral.ru/content/img/actions/cb/papillon_325_x_180.webp",
         "url": "https://coralbonus.ru/promo/papillon-2026/?banner_on_site=offers-cb-papillon",
@@ -276,6 +300,7 @@ window._promotion_settings = [
     },
     {
         "filters": ["CoralBonus"],
+        "id": "coralbonus-xanadu-club-makadi-bay-2026",
         "name": "CoralBonus.Xanadu Club Makadi Bay",
         "visual": "https://b2ccdn.coral.ru/content/img/actions/cb/aktsiya-xanadu-club-makadi-bay-offers.webp",
         "url": "https://coralbonus.ru/promo/xanadu-club-makadi-bay/?banner_on_site=offers-cb-xanadu-club-makadi-bay",
@@ -286,6 +311,7 @@ window._promotion_settings = [
     },
     {
         "filters": ["CoralBonus"],
+        "id": "coralbonus-follow-the-summer-2026",
         "name": "CoralBonus.Следуй за летом!",
         "visual": "https://b2ccdn.coral.ru/content/img/actions/cb/aktsiya-sleduj-za-letom-offers.webp",
         "url": "/poleznaya-informatsiya/offers/aktsiya-sleduj-za-letom/?banner_on_site=offers-cb-sleduj-za-letom",
@@ -296,6 +322,7 @@ window._promotion_settings = [
     },
     {
         "filters": ["CoralBonus"],
+        "id": "coralbonus-kaya-palazzo-golf-2026",
         "name": "CoralBonus.Kaya Palazzo Golf Resort",
         "visual": "https://b2ccdn.coral.ru/content/landing-pages/elitnyj-egipte/kaya-palazzo-golf-resort-cb-akcia.jpg",
         "url": "https://coralbonus.ru/promo/kaya-palazzo-golf-resort/?banner_on_site=offers-cb-aktsiya-kaya-palazzo-golf-resort",
@@ -306,6 +333,7 @@ window._promotion_settings = [
     },
     {
         "filters": ["CoralBonus"],
+        "id": "coralbonus-greenwood-hotels-2026",
         "name": "CoralBonus.Greenwood Hotels",
         "visual": "https://b2ccdn.coral.ru/content/img/actions/cb/aktsiya-greenwood-cb.jpg",
         "url": "https://coralbonus.ru/promo/greenwood/?banner_on_site=offers-cb-aktsiya-greenwood",
@@ -316,6 +344,7 @@ window._promotion_settings = [
     },
     {
         "filters": ["По направлениям"],
+        "id": "custom-tour-request",
         "name": "Не можете найти подходящий тур?",
         "visual": "https://b2ccdn.coral.ru/content/img/actions/tour-guide.png",
         "url": "/tour-guide/?banner_on_site=offers-tour-guide/",
@@ -325,6 +354,7 @@ window._promotion_settings = [
     },
     {
         "filters": ["Акции отелей"],
+        "id": "children-stay-free-hotels-2026",
         "name": "За детей<br> платить не нужно!",
         "visual": "https://b2ccdn.coral.ru/content/img/actions/detymi-v-rossii.png",
         "url": "/vygodnyy-otdyh-s-detymi-v-rossii/?banner_on_site=offers-detymi-v-rossii/",
@@ -334,6 +364,7 @@ window._promotion_settings = [
     },
     {
         "filters": ["Акции отелей"],
+        "id": "uae-hotel-service-packages-2026",
         "name": "Пакеты услуг в отелях ОАЭ",
         "visual": "https://b2ccdn.coral.ru/content/img/actions/hotels-service-packages.png",
         "url": "/poleznaya-informatsiya/hotels-service-packages/?banner_on_site=offers-hotels-service-packages/",
@@ -343,6 +374,7 @@ window._promotion_settings = [
     },
     {
         "filters": ["Акции отелей"],
+        "id": "hotel-special-offers",
         "name": "Акции отелей",
         "visual": "https://b2ccdn.coral.ru/content/img/actions/actionhotels.png",
         "url": "/poleznaya-informatsiya/offers/hot-offers/actionhotels/?banner_on_site=offers-actionhotels/",

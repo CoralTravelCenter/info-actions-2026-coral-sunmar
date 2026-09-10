@@ -54,14 +54,14 @@ describe("resolveNavigationState", () => {
     })).toEqual(fixedVisible);
   });
 
-  it("скрывает после второго движения вниз и показывает вверх", () => {
+  it("скрывает после третьего движения вниз и показывает вверх", () => {
     const armed = resolveNavigationState(fixedVisible, {
       anchorTop: -100,
       topOffset: 0,
-      scrollDelta: 48,
-      hideStep: 48,
+      scrollDelta: 96,
+      hideStep: 96,
       showDistance: 24,
-      hideConfirmations: 2,
+      hideConfirmations: 3,
       distanceSinceFixed: 64,
       initialHideDistance: 64,
     });
@@ -71,20 +71,36 @@ describe("resolveNavigationState", () => {
       downwardConfirmations: 1,
     });
 
-    const hidden = resolveNavigationState(armed, {
+    const confirmed = resolveNavigationState(armed, {
       anchorTop: -148,
       topOffset: 0,
-      scrollDelta: 48,
-      hideStep: 48,
+      scrollDelta: 96,
+      hideStep: 96,
       showDistance: 24,
-      hideConfirmations: 2,
+      hideConfirmations: 3,
       distanceSinceFixed: 112,
+      initialHideDistance: 64,
+    });
+    expect(confirmed).toEqual({
+      isFixed: true,
+      isVisible: true,
+      downwardConfirmations: 2,
+    });
+
+    const hidden = resolveNavigationState(confirmed, {
+      anchorTop: -196,
+      topOffset: 0,
+      scrollDelta: 96,
+      hideStep: 96,
+      showDistance: 24,
+      hideConfirmations: 3,
+      distanceSinceFixed: 160,
       initialHideDistance: 64,
     });
     expect(hidden).toEqual({
       isFixed: true,
       isVisible: false,
-      downwardConfirmations: 2,
+      downwardConfirmations: 3,
     });
 
     expect(resolveNavigationState(hidden, {
@@ -93,7 +109,7 @@ describe("resolveNavigationState", () => {
       scrollDelta: -23,
       hideStep: 48,
       showDistance: 24,
-      hideConfirmations: 2,
+      hideConfirmations: 3,
       distanceSinceFixed: 80,
       initialHideDistance: 64,
     })).toEqual(hidden);
@@ -104,7 +120,7 @@ describe("resolveNavigationState", () => {
       scrollDelta: -24,
       hideStep: 48,
       showDistance: 24,
-      hideConfirmations: 2,
+      hideConfirmations: 3,
       distanceSinceFixed: 80,
       initialHideDistance: 64,
     })).toEqual(fixedVisible);

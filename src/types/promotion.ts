@@ -4,6 +4,7 @@ export interface PromotionAnalyticsConfig {
 
 /** Сырой объект акции из внешнего конфига. */
 export interface PromotionConfig {
+  id: string;
   name: string;
   visual: string;
   /** Историческое поле; поддерживается до миграции внешнего конфига. */
@@ -24,6 +25,7 @@ export interface PromotionConfig {
 
 /** Полностью нормализованная внутренняя модель. */
 export interface Promotion {
+  id: string;
   name: string;
   nameText: string;
   nameHtml: string;
@@ -45,8 +47,9 @@ export interface Promotion {
 export type PromotionConfigInput = Partial<PromotionConfig>;
 
 export interface InvalidPromotion {
+  id?: string;
   name: string;
-  missing: Array<keyof Pick<PromotionConfig, "name" | "visual">>;
+  missing: Array<keyof Pick<PromotionConfig, "id" | "name" | "visual">>;
 }
 
 export interface NormalizedPromotions {

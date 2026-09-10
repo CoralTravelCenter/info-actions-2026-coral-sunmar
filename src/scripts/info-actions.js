@@ -1,5 +1,5 @@
 import {createApp} from "vue";
-// import "../data/promotion-settings.js";
+import "../data/promotion-settings-coral.js";
 
 import InfoActions from "../components/InfoActions/InfoActions.vue";
 import {BRAND} from "../config/brand";

@@ -125,10 +125,10 @@ export function collectConfigWarnings(
   promotions: readonly unknown[],
   invalid: InvalidPromotion[] = [],
 ): string[] {
-  const messages = invalid.map(({name, missing}) =>
+  const messages = invalid.map(({id, name, missing}) =>
     missing.length
       ? `${name} — не отрисована, нет полей: ${missing.join(", ")}`
-      : `${name} — не отрисована из-за дублирующегося названия`,
+      : `${name} — не отрисована из-за дублирующегося id: ${id}`,
   );
 
   if (messages.length) {

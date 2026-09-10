@@ -1,6 +1,7 @@
 export const PROMOTION_CLICK_EVENT = "promotion-card:click";
 
 export interface PromotionClickDetail {
+  id: string;
   name: string;
   url: string;
 }

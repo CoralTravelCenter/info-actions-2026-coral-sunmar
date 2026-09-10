@@ -6,7 +6,7 @@ import type {
   PromotionConfigInput,
 } from "../types/promotion";
 
-export const REQUIRED_FIELDS = ["name", "visual"] as const satisfies ReadonlyArray<
+export const REQUIRED_FIELDS = ["id", "name", "visual"] as const satisfies ReadonlyArray<
   keyof PromotionConfig
 >;
 
@@ -72,6 +72,7 @@ function normalizePromotion(
   const name = normalizeString(promo.name);
 
   return Object.freeze({
+    id: normalizeString(promo.id),
     name,
     nameText: htmlToText(name),
     nameHtml: sanitizePromotionHtml(name),
@@ -94,7 +95,7 @@ function normalizePromotion(
 export function normalizePromotions(list: readonly unknown[]): NormalizedPromotions {
   const promotions: Promotion[] = [];
   const invalid: InvalidPromotion[] = [];
-  const names = new Set<string>();
+  const ids = new Set<string>();
 
   list.forEach((value, index) => {
     if (!isPromotionConfigInput(value)) {
@@ -116,15 +117,15 @@ export function normalizePromotions(list: readonly unknown[]): NormalizedPromoti
     }
 
     const promotion = normalizePromotion(promo, parseFilters(promo));
-    if (names.has(promotion.nameText)) {
-      invalid.push({name: promotion.name, missing: []});
+    if (ids.has(promotion.id)) {
+      invalid.push({id: promotion.id, name: promotion.name, missing: []});
       console.warn(
-        `[info-actions] Дублирующееся название ${promotion.nameText}; запись пропущена.`,
+        `[info-actions] Дублирующийся id ${promotion.id}; запись пропущена.`,
       );
       return;
     }
 
-    names.add(promotion.nameText);
+    ids.add(promotion.id);
     promotions.push(promotion);
   });
 

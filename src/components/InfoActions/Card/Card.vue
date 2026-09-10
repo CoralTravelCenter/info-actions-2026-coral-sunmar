@@ -8,11 +8,12 @@ import {
   useTimeoutFn,
 } from "@vueuse/core";
 import {formatPromotionEndText} from "../../../data/promotionDates";
+import type {Brand} from "../../../config/brand";
 import type {Promotion} from "../../../types/promotion";
 
 const props = withDefaults(defineProps<{
   promotion: Promotion;
-  brand: "coral" | "sunmar";
+  brand: Brand;
   erid?: string;
   prioritizeImage?: boolean;
 }>(), {
@@ -84,14 +85,12 @@ useEventListener(window, "scroll", () => {
 </script>
 
 <template>
-  <li class="promo-card">
+  <li class="promo-card" :class="`promo-card--${brand}`">
     <article>
       <div
         v-if="erid"
         ref="eridDisclosureRef"
         class="erid-disclosure"
-				@mouseenter="openOnHover"
-				@mouseleave="closeOnHover"
 				@focusin="openOnHover"
 				@focusout="closeOnFocusOut"
         @keydown.esc="isEridOpen = false"
@@ -103,6 +102,8 @@ useEventListener(window, "scroll", () => {
           :aria-controls="eridPopoverId"
           aria-haspopup="dialog"
           @click="toggleOnClick"
+					@mouseenter="openOnHover"
+					@mouseleave="closeOnHover"
         >
           Реклама
         </button>
@@ -221,7 +222,7 @@ useEventListener(window, "scroll", () => {
 
           <a
             v-if="promotion.url"
-            class="promo-card__link prime-btn"
+            class="promo-card__link"
             :href="promotion.url"
             :aria-label="`Подробнее: ${promotion.nameText}`"
             target="_blank"
@@ -234,7 +235,7 @@ useEventListener(window, "scroll", () => {
           <button
             v-else
             type="button"
-            class="promo-card__link prime-btn js-popup-trigger"
+            class="promo-card__link js-popup-trigger"
             :aria-label="`Подробнее: ${promotion.nameText}`"
             @click="emit('promotion-click')"
           >

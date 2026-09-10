@@ -44,9 +44,11 @@ const areWarningsVisible = ref(configWarnings.length > 0);
 </script>
 
 <template>
+	<div class="info-actions" :class="`info-actions--${brand}`">
 	<Tabs
 			v-if="hasPromotions"
 			v-model="currentFilter"
+			:brand="brand"
 			:filters="filters"
 	/>
 
@@ -75,11 +77,12 @@ const areWarningsVisible = ref(configWarnings.length > 0);
 	<ul
 			v-if="filteredPromotions.length"
 			class="cards-container"
+			:class="`cards-container--${brand}`"
 			aria-label="Список акций"
 	>
 		<Card
 				v-for="(promotion, index) in visiblePromotions"
-				:key="promotion.nameText"
+				:key="promotion.id"
 				v-bonus="{
         name: promotion.nameText,
         enabled: promotion.analytics.bonusImpression,
@@ -96,15 +99,22 @@ const areWarningsVisible = ref(configWarnings.length > 0);
 	<button
 			v-if="remainingCount"
 			type="button"
-			class="show-more prime-btn"
+			class="show-more"
+			:class="`show-more--${brand}`"
 			@click="showMore"
 	>
 		Показать ещё {{ nextPageCount }}
 	</button>
 
-	<p v-if="!hasPromotions" class="cards-empty" role="status">
+	<p
+		v-if="!hasPromotions"
+		class="cards-empty"
+		:class="`cards-empty--${brand}`"
+		role="status"
+	>
 		Сейчас нет активных акций
 	</p>
+	</div>
 </template>
 
 <style scoped lang="scss">

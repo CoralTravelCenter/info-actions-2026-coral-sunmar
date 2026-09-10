@@ -1,15 +1,15 @@
 @use '../styles/common/mixins';
 
-// Полный глобальный селектор сохраняет доступ к CTA внутри дочерних компонентов.
-:global(#info-actions[data-brand='sunmar'] .prime-btn) {
-  font-weight: 600;
-  line-height: 1.5;
-  background: var(--gradient_Primary, linear-gradient(245deg, var(--Gradient-color_Gradinet_Primary_Second, #D8242A) 15.84%, var(--Gradient-color_Gradient_Primary_First, #E7317D) 84.16%));
-  border-radius: 40px;
-  padding-inline: 32px;
+.info-actions,
+.info-actions::before,
+.info-actions::after,
+.info-actions *,
+.info-actions *::before,
+.info-actions *::after {
+  box-sizing: border-box;
 }
 
-#info-actions {
+.info-actions {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -34,10 +34,11 @@
 
 .cards-empty {
   margin: 24px 0;
+  font-size: var(--font_Size_Body);
   text-align: center;
 }
 
-[data-brand='sunmar'] .cards-empty {
+.cards-empty--sunmar {
   color: #061A3E;
 }
 
@@ -76,13 +77,51 @@
   }
 }
 
-button.show-more {
+.show-more {
   width: fit-content;
+  height: 48px;
   margin: 24px auto;
+  padding: 12px 20px;
+  color: var(--color_Text_Light);
+  font-size: var(--font_Size_Body);
+  line-height: 1.5;
+  text-align: center;
+  background-color: var(--color_Btn_Bg_Default);
+  border: none;
   border-radius: 8px;
+  cursor: pointer;
+  transition: background-color var(--transition);
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--color_Btn_Bg_Hover);
+    }
+  }
+
+  &:active {
+    background-color: var(--color_Btn_Bg_Pressed);
+  }
+
+  &:focus-visible {
+    background-color: var(--color_Btn_Bg_Focused);
+    outline: 1px solid var(--color_Btn_Border_Focused);
+  }
 }
 
-[data-brand='sunmar'] .cards-container {
+.show-more--sunmar {
+  padding-inline: 32px;
+  font-weight: 600;
+  background: var(--gradient_Primary, linear-gradient(245deg, var(--Gradient-color_Gradinet_Primary_Second, #D8242A) 15.84%, var(--Gradient-color_Gradient_Primary_First, #E7317D) 84.16%));
+  border-radius: 40px;
+
+  &:hover,
+  &:active,
+  &:focus-visible {
+    background: var(--gradient_Primary, linear-gradient(245deg, var(--Gradient-color_Gradinet_Primary_Second, #D8242A) 15.84%, var(--Gradient-color_Gradient_Primary_First, #E7317D) 84.16%));
+  }
+}
+
+.cards-container--sunmar {
   @media (width >= 1280px) {
     @include mixins.flex-grid(3, 24px, start);
   }

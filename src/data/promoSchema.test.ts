@@ -14,6 +14,7 @@ describe("promoSchema", () => {
 
     const {promotions, invalid} = normalizePromotions([
       {
+        id: "promotion",
         name: "Акция",
         visual: "image.webp",
         filter: "По направлениям, CoralBonus, CoralBonus",
@@ -28,19 +29,21 @@ describe("promoSchema", () => {
     });
   });
 
-  it("отбрасывает записи без обязательных полей и повторяющиеся названия", () => {
+  it("отбрасывает записи без обязательных полей и повторяющиеся id", () => {
     vi.spyOn(console, "warn").mockImplementation(() => undefined);
 
     const result = normalizePromotions([
-      {name: "Одинаковая<br>акция", visual: "first.webp"},
-      {name: "Одинаковая акция", visual: "second.webp"},
-      {name: "Без изображения"},
+      {id: "same", name: "Первая акция", visual: "first.webp"},
+      {id: "same", name: "Вторая акция", visual: "second.webp"},
+      {id: "without-image", name: "Без изображения"},
+      {name: "Без id", visual: "image.webp"},
     ]);
 
     expect(result.promotions).toHaveLength(1);
     expect(result.invalid).toEqual([
-      {name: "Одинаковая акция", missing: []},
+      {id: "same", name: "Вторая акция", missing: []},
       {name: "Без изображения", missing: ["visual"]},
+      {name: "Без id", missing: ["id"]},
     ]);
   });
 
@@ -49,10 +52,30 @@ describe("promoSchema", () => {
 
     expect(result.promotions).toEqual([]);
     expect(result.invalid).toEqual([
-      {name: "запись #1", missing: ["name", "visual"]},
-      {name: "запись #2", missing: ["name", "visual"]},
-      {name: "запись #3", missing: ["name", "visual"]},
-      {name: "запись #4", missing: ["name", "visual"]},
+      {name: "запись #1", missing: ["id", "name", "visual"]},
+      {name: "запись #2", missing: ["id", "name", "visual"]},
+      {name: "запись #3", missing: ["id", "name", "visual"]},
+      {name: "запись #4", missing: ["id", "name", "visual"]},
     ]);
+  });
+
+  it("разрешает одинаковые названия при разных id", () => {
+    const result = normalizePromotions([
+      {id: "first", name: "Одинаковая акция", visual: "first.webp"},
+      {id: "second", name: "Одинаковая акция", visual: "second.webp"},
+    ]);
+
+    expect(result.invalid).toEqual([]);
+    expect(result.promotions.map(promotion => promotion.id)).toEqual(["first", "second"]);
+  });
+
+  it("нормализует id и отклоняет запись без него", () => {
+    const result = normalizePromotions([
+      {id: "  stable-id  ", name: "Акция", visual: "image.webp"},
+      {name: "Без id", visual: "image.webp"},
+    ]);
+
+    expect(result.promotions[0]?.id).toBe("stable-id");
+    expect(result.invalid).toEqual([{name: "Без id", missing: ["id"]}]);
   });
 });
