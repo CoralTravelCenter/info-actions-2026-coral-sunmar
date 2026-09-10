@@ -16,9 +16,11 @@ const props = withDefaults(defineProps<{
   brand: Brand;
   erid?: string;
   prioritizeImage?: boolean;
+  showTime?: boolean;
 }>(), {
   erid: "",
   prioritizeImage: false,
+  showTime: true,
 });
 
 const emit = defineEmits<{
@@ -175,7 +177,7 @@ useEventListener(window, "scroll", () => {
         <p class="promo-card__description" v-html="promotion.descriptionHtml"></p>
 
         <div class="promo-card__footer">
-          <p v-if="endText" class="promo-card__time">
+          <p v-if="showTime && endText" class="promo-card__time">
             <span class="icon" aria-hidden="true">
               <svg
                 v-if="brand === 'coral'"

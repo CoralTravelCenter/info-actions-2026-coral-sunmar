@@ -1,4 +1,6 @@
 {
   "folder": "info-actions-2026",
-  "blocks": ["text", "info-actions", "contacts"]
+  "blocks": [
+    "info-actions-slider"
+  ]
 }
